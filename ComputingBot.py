@@ -20,14 +20,14 @@ async def what(ctx):
 @bot.command()
 async def Commands(ctx):
     await ctx.send("List of helpful commands:")
-        ctx.send("!ping - What is your ping?")
-        ctx.send("!cute - Who is the cutest?")
-        ctx.send("!what - What is this discord all about?")
-        ctx.send("!say - Want me to say something?")
-        ctx.send("!gay - Check how gay you are!")
-        ctx.send("!love - Do you want some love?")
-        ctx.send("!rainbow - Rainboww!!")
-        ctx.send("!zinnia - Find out who she has traumatised")
+    ctx.send("!ping - What is your ping?")
+    ctx.send("!cute - Who is the cutest?")
+    ctx.send("!what - What is this discord all about?")
+    ctx.send("!say - Want me to say something?")
+    ctx.send("!gay - Check how gay you are!")
+    ctx.send("!love - Do you want some love?")
+    ctx.send("!rainbow - Rainboww!!")
+    ctx.send("!zinnia - Find out who she has traumatised")
 
 @bot.command()
 async def ping(ctx):
