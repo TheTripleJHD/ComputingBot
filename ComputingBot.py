@@ -32,7 +32,7 @@ async def cute(ctx):
     await ctx.send("David is cute")
 
 @bot.command()
-async def say(ctx, something):
+async def say(ctx, *, something):
     await ctx.send(something)
 
 @bot.event
