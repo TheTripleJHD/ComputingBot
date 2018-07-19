@@ -39,4 +39,4 @@ async def on_member_join(member):
     guild = member.guild
     await member.send("Welcome to {}!".format(guild.name))
 
-bot.run(token)
+bot.run(os.getenv('TOKEN'))
