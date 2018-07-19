@@ -18,7 +18,7 @@ async def what(ctx):
     await ctx.send(":computer:")
 
 @bot.command()
-async def Commands(ctx):
+async def helpme(ctx):
     await ctx.send("List of helpful commands:")
     await ctx.send("!ping - What is your ping?")
     await ctx.send("!cute - Who is the cutest?")
