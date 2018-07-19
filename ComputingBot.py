@@ -1,0 +1,42 @@
+import discord
+from discord.ext import commands
+from discord.ext.commands import Bot
+
+bot = commands.Bot(command_prefix="!")
+
+@bot.event
+async def on_ready():
+    print("Bot is ready!")
+    await bot.change_presence(
+    activity=discord.Activity(name='What is love - Twice',type=discord.ActivityType.listening),status=discord.Status.online)
+
+@bot.command()
+async def what(ctx):
+    await ctx.send(":computer:")
+
+@bot.command()
+async def Commands(ctx):
+    await ctx.send("List of helpful commands:")
+    await ctx.send("!ping - What is your ping?")
+    await ctx.send("!cute - Who is the cutest?")
+    await ctx.send("!what - What is this discord all about?")
+    await ctx.send("!say - Want me to say something?")
+
+@bot.command()
+async def ping(ctx):
+    await ctx.send(ctx.author.mention + " Pong!")
+
+@bot.command()
+async def cute(ctx):
+    await ctx.send("David is cute")
+
+@bot.command()
+async def say(ctx, something):
+    await ctx.send(something)
+
+@bot.event
+async def on_member_join(member):
+    guild = member.guild
+    await member.send("Welcome to {}!".format(guild.name))
+
+bot.run(process.env.token)
