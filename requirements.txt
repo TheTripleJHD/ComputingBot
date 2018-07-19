@@ -1,1 +1,1 @@
-discord.py
+pip install -u git+hyyps://github.com/Rapptz/discord.py@rewrite#egg=discord.py[voice]
