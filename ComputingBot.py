@@ -48,11 +48,22 @@ async def on_member_join(member):
     
 @bot.command()
 async def gay(ctx):
-    num = round(random.uniform(0.00,100.00), 2)
-    await ctx.send(ctx.author.mention, "You are ", num, "% Gay")
+    await num = round(random.uniform(0.00,100.00), 2)\
+    await text = "You are ", num, "% Gay"
+    await ctx.send(ctx.author.mention + text)
     
 @bot.command()
 async def love(ctx):
     await ctx.message.add_reaction(emoji = "😍")
+    
+@bot.command()
+async def rainbow(ctx):
+    await ctx.message.add_reaction(emoji = "💙")
+    await ctx.message.add_reaction(emoji = "💚")
+    await ctx.message.add_reaction(emoji = "💛")
+    await ctx.message.add_reaction(emoji = "🧡")
+    await ctx.message.add_reaction(emoji = "💗")
+    await ctx.message.add_reaction(emoji = "💜")
+    await ctx.message.add_reaction(emoji = "🖤")
 
 bot.run(os.getenv('TOKEN'))
