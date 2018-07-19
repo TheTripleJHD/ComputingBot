@@ -35,7 +35,7 @@ async def cute(ctx):
    
 @bot.command()
 async def zinnia(ctx):
-    await ctx.send("Poor Gideon... :sob:"
+    await ctx.send("Poor Gideon... :sob:")
 
 @bot.command()
 async def say(ctx, *, something):
