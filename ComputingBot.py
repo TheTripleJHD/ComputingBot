@@ -2,6 +2,8 @@ import discord
 from discord.ext import commands
 from discord.ext.commands import Bot
 import os
+import random
+
 
 bot = commands.Bot(command_prefix="!")
 
@@ -30,6 +32,10 @@ async def ping(ctx):
 @bot.command()
 async def cute(ctx):
     await ctx.send("David is cute")
+   
+@bot.command()
+async def zinnia(ctx):
+    await ctx.send("Poor Gideon... :sob:"
 
 @bot.command()
 async def say(ctx, *, something):
@@ -39,5 +45,13 @@ async def say(ctx, *, something):
 async def on_member_join(member):
     guild = member.guild
     await member.send("Welcome to {}!".format(guild.name))
+    
+@bot.command()
+async def gay(ctx):
+    await ctx.send(ctx.author.mention + "You are " + round(random.uniform(0.00,100.00), 2) + "% Gay")
+    
+@bot.command()
+async def love(ctx):
+    await ctx.message.add_reaction(emoji = "😍")
 
 bot.run(os.getenv('TOKEN'))
