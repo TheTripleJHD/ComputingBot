@@ -48,8 +48,10 @@ async def on_member_join(member):
     
 @bot.command()
 async def gay(ctx):
-    num = round(random.uniform(0.00,100.00), 2)\
-    text = 'You are ' + str(num) + '% Gay.'
+    num = round(random.uniform(0.00,100.00), 2)
+    end = "% Gay."
+    start = 'You are "
+    text = start + str(num) + end
     await ctx.send(ctx.author.mention + text)
     
 @bot.command()
