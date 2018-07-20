@@ -84,7 +84,7 @@ async def gay(ctx):
         text = start + str(num) + end
         await ctx.send(ctx.author.mention + text)
     else:
-        if num <= 80.00:
+        if num >= 80.00:
             start = " You are "
             end = "just gay kys."
             text = start + end
