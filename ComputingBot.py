@@ -18,7 +18,7 @@ async def on_ready():
 @bot.listen()
 async def on_message(message):
      text = message.content.split().upper()
-     if re.search(r'\b(da)?vid\b', text, re.I))):
+     if re.search(r'\b(da)?vid\b', text, re.I):
         message.add_reaction('\N{SMILING FACE WITH HEART-SHAPED EYES}') 
         
 @bot.command()
