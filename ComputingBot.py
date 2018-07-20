@@ -95,7 +95,7 @@ async def gay(ctx):
     else:   
         start = " Lucky! "
         end = "You are only "
-        gay = "% gay.
+        gay = "% gay."
         text = start + end + str(num) + gay 
         await ctx.send(ctx.author.mention + text)
     
