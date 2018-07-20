@@ -17,7 +17,7 @@ async def on_ready():
    
 @bot.listen()
 async def on_message(message):
-    if message.author != bot.user and re.search(r'\bvid(da)?\b', re.I):
+    if message.author != bot.user and re.search(r'\bda(vid)?\b', re.I):
         await message.add_reaction('\N{LOVE HEART}')
 
 @bot.command()
