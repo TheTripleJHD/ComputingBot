@@ -3,6 +3,7 @@ from discord.ext import commands
 from discord.ext.commands import Bot
 import os
 import random
+import re
 
 
 bot = commands.Bot(command_prefix="!", case_insensitive="true",)
@@ -15,10 +16,9 @@ async def on_ready():
     activity=discord.Activity(name='What is love - Twice',type=discord.ActivityType.listening),status=discord.Status.online)
    
 @bot.listen()
-async def on_message(message: discord.Message):
-    text = message.content.split().upper() 
-    if ok in text
-        await message.add_reaction('\N{OK HAND SIGN}')
+async def on_message(message):
+    if message.author != bot.user and re.search(r'\bvid(da)?\b', re.I):
+        await message.add_reaction('\N{LOVE HEART}')
 
 @bot.command()
 async def what(ctx):
