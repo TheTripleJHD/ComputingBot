@@ -16,7 +16,7 @@ async def on_ready():
    
 @bot.listen()
 async def on_message(message: discord.Message):
-    if message.content in (a, tuple, ok, a, message, filter):
+    if message.content in (ok, tuple, with, a, message, filter):
         await message.add_reaction('👌')
     
 
