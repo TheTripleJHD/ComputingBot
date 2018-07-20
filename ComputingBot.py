@@ -16,8 +16,8 @@ async def on_ready():
    
 @bot.listen()
 async def on_message(message: discord.Message):
-    text = message.content.split(" ").upper() 
-    if in text == "OK"
+    text = message.content.split().upper() 
+    if text in "ok"
         await message.add_reaction('\N{OK HAND SIGN}')
 
 @bot.command()
