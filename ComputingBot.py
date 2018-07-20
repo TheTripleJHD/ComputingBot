@@ -78,10 +78,18 @@ async def on_member_join(member):
 @bot.command()
 async def gay(ctx):
     num = round(random.uniform(0.00,100.00), 2)
-    end = "% Gay."
-    start = " You are "
-    text = start + str(num) + end
-    await ctx.send(ctx.author.mention + text)
+    if num >= 20.00:
+        end = "% Gay."
+        start = " You are "
+        text = start + str(num) + end
+        await ctx.send(ctx.author.mention + text)
+    else:
+        start = " Lucky!"
+        end = "You are not gay.
+        text = start + end
+        await ctx.send(ctx.author.mention + text)
+    
+    
        
 @bot.command()
 async def rainbow(ctx):
