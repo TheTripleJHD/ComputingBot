@@ -14,10 +14,10 @@ async def on_ready():
     await bot.change_presence(
     activity=discord.Activity(name='What is love - Twice',type=discord.ActivityType.listening),status=discord.Status.online)
    
-@bot.event
-async def on_message(ctx):
-    if ctx.message == 'vid':
-        await ctx.message.add_reaction(emoji = "😍")
+#@bot.event
+#async def on_message(ctx):
+   # if ctx.message == 'vid':
+       # await ctx.message.add_reaction(emoji = "😍")
     
 
 @bot.command()
