@@ -20,7 +20,7 @@ async def on_message(message):
      text = message.content.upper()
      text.split()
      if re.search(r'\b(da)?vid\b', text, re.I):
-        message.add_reaction('\N{SMILING FACE WITH HEART-SHAPED EYES}') 
+        await message.add_reaction('\N{SMILING FACE WITH HEART-SHAPED EYES}') 
         
 @bot.command()
 async def what(ctx):
