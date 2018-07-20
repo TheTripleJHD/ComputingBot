@@ -27,9 +27,8 @@ async def on_message(message):
      text = message.content.upper()
      text.split()
      if re.search(r'\b(zinnia)\b', text, re.I):
-        await message.add_reaction('\N{OK HAND SIGN}')await message.add_reaction('\N{OK HAND SIGN}')
-        await await message.add_reaction('\N{}')
-        
+        await message.add_reaction('\N{WHITE RIGHT POINTING BACKHAND INDEX}')
+        await message.add_reaction('\N{OK HAND SIGN}')
         
 @bot.listen()
 async def on_message(message):
