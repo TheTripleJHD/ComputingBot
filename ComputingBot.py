@@ -17,7 +17,7 @@ async def on_ready():
    
 @bot.listen()
 async def on_message(message):
-    if message.author != bot.user and re.search(r'\bda(vid)?\b', re.I):
+    if re.search(r'\bda(vid)?\b', re.I):
        message.add_reaction('\N{SMILING FACE WITH HEART-SHAPED EYES}') 
         
 @bot.command()
