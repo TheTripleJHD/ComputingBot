@@ -5,7 +5,7 @@ import os
 import random
 
 
-bot = commands.Bot(command_prefix="!", case_insensitive=true,)
+bot = commands.Bot(command_prefix="!", case_insensitive="true",)
 
 
 @bot.event
