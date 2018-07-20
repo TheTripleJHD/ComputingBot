@@ -78,13 +78,15 @@ async def on_member_join(member):
 @bot.command()
 async def gay(ctx):
     num = round(random.uniform(0.00,100.00), 2)
-    if num >= 80.00:
-        start = " You are "
-        end = "just gay kys."
+    if num >= 95.00:
+        start = " You are just gay kys."
+        end = "% gay."
         text = start + end
+        gay = " Estimated to be "
+        text = start + gay + str(num) + end
         await ctx.send(ctx.author.mention + text)
       
-    elif num >= 20.00 and num < 80.00:
+    elif num >= 5.00 and num < 95.00:
         end = "% Gay."
         start = " You are "
         text = start + str(num) + end
@@ -92,8 +94,9 @@ async def gay(ctx):
         
     else:   
         start = " Lucky! "
-        end = "You are not gay."
-        text = start + end
+        end = "You are only "
+        gay = "% gay.
+        text = start + end + str(num) + gay 
         await ctx.send(ctx.author.mention + text)
     
     
