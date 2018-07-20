@@ -22,6 +22,13 @@ async def on_message(message):
      if re.search(r'\b(da)?vid\b', text, re.I):
         await message.add_reaction('\N{SMILING FACE WITH HEART-SHAPED EYES}') 
         
+@bot.listen()
+async def on_message(message):
+     text = message.content.upper()
+     text.split()
+     if re.search(r'\b(zinnia)\b', text, re.I):
+        await message.add_reaction('\N{ANGRY FACE}') 
+        
 @bot.command()
 async def what(ctx):
     await ctx.send(":computer:")
