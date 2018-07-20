@@ -36,6 +36,7 @@ async def on_message(message):
      if re.search(r'\b(weng)\b', text, re.I) or re.search(r'\b(yulei)\b', text, re.I):
         await message.add_reaction('\N{WHITE RIGHT POINTING BACKHAND INDEX}')
         await message.add_reaction('\N{OK HAND SIGN}')
+        await bot.say("Call me BIG")
         
 @bot.command()
 async def what(ctx):
