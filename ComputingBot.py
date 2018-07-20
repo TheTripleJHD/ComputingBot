@@ -27,7 +27,17 @@ async def on_message(message):
      text = message.content.upper()
      text.split()
      if re.search(r'\b(zinnia)\b', text, re.I):
-        await message.add_reaction('\N{ANGRY FACE}') 
+        await message.add_reaction('\N{OK HAND SIGN}')await message.add_reaction('\N{OK HAND SIGN}')
+        await await message.add_reaction('\N{}')
+        
+        
+@bot.listen()
+async def on_message(message):
+     text = message.content.upper()
+     text.split()
+     if re.search(r'\b(weng)?\b', text, re.I) or re.search(r'\b(yulei)?\b', text, re.I):
+        await message.add_reaction('\N{WHITE RIGHT POINTING BACKHAND INDEX}')
+        await message.add_reaction('\N{ANGRY FACE}')
         
 @bot.command()
 async def what(ctx):
@@ -73,11 +83,7 @@ async def gay(ctx):
     start = " You are "
     text = start + str(num) + end
     await ctx.send(ctx.author.mention + text)
-    
-@bot.command()
-async def love(ctx):
-    await ctx.message.add_reaction(emoji = "😍")
-    
+       
 @bot.command()
 async def rainbow(ctx):
     await ctx.message.add_reaction(emoji = "💙")
