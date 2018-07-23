@@ -103,9 +103,24 @@ async def gay(ctx):
         gay = "% gay."
         text = start + end + str(num) + gay 
         await ctx.send(ctx.author.mention + text)
+        
+@bot.command()
+async def ok(message):
+    return message.author != bot.user
+
+history = await ctx.channel.history(limit=2, check=not_me, reverse=True).flatten()
+
+if not history:
+    # There is no history
+    return
+
+message = history[0]
+
+await message.add_reaction('\N{OK HAND SIGN}')
           
 @bot.command()
 async def rainbow(ctx):
+    msg = await channel.history().get(author__name='Dave')
     await ctx.message.add_reaction(emoji = "💙")
     await ctx.message.add_reaction(emoji = "💚")
     await ctx.message.add_reaction(emoji = "💛")
