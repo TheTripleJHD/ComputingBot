@@ -78,8 +78,7 @@ async def on_member_join(member):
 @bot.command()
 async def gay(ctx):
     num = round(random.uniform(0.00,100.00), 2)
-    ctx.author = name
-    if name=='sid':
+    if ctx.author=='ɥʇɹɐpᴉs#4852':
          await ctx.send(ctx.author.mention + " Sid is that even a question?")  
     elif num >= 95.00:
         start = " You are just gay kys."
