@@ -109,7 +109,7 @@ async def ok(ctx):
     def not_me(message):
         return message.author != bot.user
 
-history = await ctx.channel.history(limit=2, check=not_me, reverse=True).flatten()
+history = await ctx.channel.history(limit=2, check=not_me, reverse=True).flatten())
 
 if not history:
     # There is no history
@@ -121,7 +121,6 @@ await message.add_reaction('\N{OK HAND SIGN}')
     
 @bot.command()
 async def rainbow(ctx):
-    msg = await channel.history().get(author__name='Dave')
     await ctx.message.add_reaction(emoji = "💙")
     await ctx.message.add_reaction(emoji = "💚")
     await ctx.message.add_reaction(emoji = "💛")
