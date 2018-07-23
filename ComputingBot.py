@@ -79,9 +79,9 @@ async def on_member_join(member):
 async def gay(ctx):
     name = str(ctx.author)
     num = round(random.uniform(0.00,100.00), 2)
-    if name == 'zinnia#8516':
-        await ctx.send("Sorry but you're a girl. :3"
-    elif name == 'ɥʇɹɐpᴉs#4852':
+    if name =='zinnia#8516':
+        await ctx.send("Sorry but you're a girl. :3")
+    elif name =='ɥʇɹɐpᴉs#4852':
          await ctx.send("Sid is that even a question? :)")  
     elif num >= 95.00:
         start = " You are just gay kys."
