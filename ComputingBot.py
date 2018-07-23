@@ -111,7 +111,7 @@ async def ok(ctx):
 
     history = await ctx.channel.history(limit=2, check=not_me, reverse=True).flatten()
 
-    if !history:
+    if not history:
         return
 
     message = history[0]
