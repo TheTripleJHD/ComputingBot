@@ -117,7 +117,12 @@ async def ok(message):
     message = history[0]
 
     await message.add_reaction('\N{OK HAND SIGN}')
-          
+    
+@bot.command()
+async def yes(message):
+    return (await channel.history(reverse=True).flatten())[0].content
+☑1
+
 @bot.command()
 async def rainbow(ctx):
     msg = await channel.history().get(author__name='Dave')
