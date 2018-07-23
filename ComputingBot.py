@@ -78,7 +78,7 @@ async def on_member_join(member):
 @bot.command()
 async def gay(ctx):
     num = round(random.uniform(0.00,100.00), 2)
-    if ctx.author=='ɥʇɹɐpᴉs#4852':
+    if str(ctx.author) == 'ɥʇɹɐpᴉs#4852':
          await ctx.send(ctx.author.mention + " Sid is that even a question?")  
     elif num >= 95.00:
         start = " You are just gay kys."
@@ -100,9 +100,7 @@ async def gay(ctx):
         gay = "% gay."
         text = start + end + str(num) + gay 
         await ctx.send(ctx.author.mention + text)
-    
-    
-       
+          
 @bot.command()
 async def rainbow(ctx):
     await ctx.message.add_reaction(emoji = "💙")
@@ -112,8 +110,4 @@ async def rainbow(ctx):
     await ctx.message.add_reaction(emoji = "💜")
     await ctx.message.add_reaction(emoji = "🖤")
     
-@bot.command()
-async def check(ctx):
-    await ctx.send(ctx.author)
-
 bot.run(os.getenv('TOKEN'))
