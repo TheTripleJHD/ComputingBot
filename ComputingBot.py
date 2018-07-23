@@ -104,17 +104,12 @@ async def gay(ctx):
         text = start + end + str(num) + gay 
         await ctx.send(ctx.author.mention + text)
         
-@bot.command()
+@commands.command
 async def ok(ctx):
-    def not_me(message):
-        return message.author != bot.user
-
-    history = await ctx.channel.history(limit=2, check=not_me, reverse=True).flatten()
-
-    if not history:
+    history = await ctx.channel.history(limit=2).flatten()
+    if len(history) != 2:
         return
-
-    message = history[0]
+    message = history[-1]
 
     await message.add_reaction('\N{OK HAND SIGN}')
     
