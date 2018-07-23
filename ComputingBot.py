@@ -113,7 +113,7 @@ async def ok(ctx):
 
     if not history:
     # There is no history
-    return
+        return
 
     message = history[0]
 
