@@ -112,5 +112,9 @@ async def rainbow(ctx):
     await ctx.message.add_reaction(emoji = "💖")
     await ctx.message.add_reaction(emoji = "💜")
     await ctx.message.add_reaction(emoji = "🖤")
+    
+@bot.command()
+async def check(ctx):
+    await ctx.send(ctx.author)
 
 bot.run(os.getenv('TOKEN'))
