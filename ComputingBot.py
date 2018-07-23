@@ -110,7 +110,6 @@ async def ok(ctx):
     if len(history) != 2:
         return
     message = history[-1]
-
     await message.add_reaction('\N{OK HAND SIGN}')
     
 @bot.command()
