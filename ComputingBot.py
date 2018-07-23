@@ -80,7 +80,7 @@ async def gay(ctx):
     num = round(random.uniform(0.00,100.00), 2)
     if str(ctx.author) == 'zinnia#8516':
         await ctx.send("Sorry but you're a girl. :3"
-    elif str(ctx.author) == 'ɥʇɹɐpᴉs#4852':
+    elif (str(ctx.author) == 'ɥʇɹɐpᴉs#4852'):
          await ctx.send("Sid is that even a question? :)")  
     elif num >= 95.00:
         start = " You are just gay kys."
