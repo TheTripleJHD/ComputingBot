@@ -60,7 +60,11 @@ async def helpme(ctx):
     
 @bot.command()
 async def doggo(ctx):
-    url = "http://loremflickr.com/320/240/dog,puppy"
+    num = random.uniform(0,4)
+    url1 = "http://loremflickr.com/1280/720/dog,puppy"
+    url2 = "http://loremflickr.com/640/480/dog,puppy"
+    url3 = "http://loremflickr.com/320/240/dog,puppy"
+    url = url+num
     async with aiohttp.request("GET", url) as f:   
         img = await f.read()
     await ctx.send(file=discord.File(img, "nofilter.jpg"))
@@ -107,7 +111,7 @@ async def gay(ctx):
     if name =='zinnia#8516':
         await ctx.send("Sorry but you're a girl. :3")
         await ctx.send("But if you were a guy you would be " + num + "% gay.")
-    elif name =='ɥʇɹɐpᴉs#4852':
+    elif name =='!ɥʇɹɐpᴉs#4852':
          await ctx.send("Sid is that even a question? :)")  
     elif num >= 95.00:
         start = " You are just gay kys."
