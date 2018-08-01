@@ -49,7 +49,7 @@ async def what(ctx):
 
 @bot.command()
 async def helpme(ctx):
-    await ctx.author.send(f'```{List of helpful commands:\n!ping - What is your ping?\n!cute - Who is the cutest?\n!what - What is this discord all about?\n!say - Want me to say something?\n!gay - Check how gay you are!\n!rainbow - Rainboww!!\n!zinnia - Find out who she has traumatised\n!doggo - Awww how cute are dogs?\n!ducc - Waddle waddle..\n!dicc - Big Dicc Energy checker}```')  
+    await ctx.author.send("```List of helpful commands:\n!ping - What is your ping?\n!cute - Who is the cutest?\n!what - What is this discord all about?\n!say - Want me to say something?\n!gay - Check how gay you are!\n!rainbow - Rainboww!!\n!zinnia - Find out who she has traumatised\n!doggo - Awww how cute are dogs?\n!ducc - Waddle waddle..\n!dicc - Big Dicc Energy checker```")
 @bot.command()
 async def doggo(ctx):
     num = randint(1,4)
