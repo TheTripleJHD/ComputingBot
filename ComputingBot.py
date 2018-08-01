@@ -62,11 +62,14 @@ async def helpme(ctx):
     
 @bot.command()
 async def doggo(ctx):
-    num = random.uniform(0,4)
-    url1 = "http://loremflickr.com/1280/720/dog,puppy"
-    url2 = "http://loremflickr.com/640/480/dog,puppy"
-    url3 = "http://loremflickr.com/320/240/dog,puppy"
-    url = url+str(num)
+    num = randomint(1,4)
+    if num = 1:
+        url = "http://loremflickr.com/1280/720/dog,puppy"   
+    elif num = 2:
+        url = "http://loremflickr.com/640/480/dog,puppy"
+    else:
+        url = "http://loremflickr.com/320/240/dog,puppy"
+        
     async with aiohttp.request("GET", url) as f:   
         img = await f.read()
     await ctx.send(file=discord.File(img, "nofilter.jpg"))
