@@ -4,6 +4,7 @@ from discord.ext.commands import Bot
 import os
 import random
 import re
+import aiohttp
 
 
 bot = commands.Bot(command_prefix="!", case_insensitive="true",)
