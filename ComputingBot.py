@@ -3,6 +3,7 @@ from discord.ext import commands
 from discord.ext.commands import Bot
 import os
 import random
+from random import *
 import re
 import aiohttp
 
@@ -76,7 +77,7 @@ async def doggo(ctx):
     
 @bot.command()
 async def ducc(ctx):
-    num = random.uniform(0,100)
+    num = randint(0,100)
     if num <= 50:
         url = "https://random-d.uk/api/v1/randomimg"
         async with aiohttp.request("GET", url) as f:   
@@ -112,7 +113,7 @@ async def on_member_join(member):
 @bot.command()
 async def gay(ctx):
     name = str(ctx.author)
-    num = round(random.uniform(0.00,100.00), 2)
+    num = round(uniform(0,100), 2)
     if name =='zinnia#8516' or name == 'Triple__J#8312':
         start = " But if you were a guy you would be "
         end = "% gay."
@@ -141,7 +142,7 @@ async def gay(ctx):
         gay = "% gay."
         text = start + end + str(num) + gay 
         await ctx.send(ctx.author.mention + text)
-        
+     
 @bot.command()
 async def dicc(ctx):
     name = str(ctx.author)
