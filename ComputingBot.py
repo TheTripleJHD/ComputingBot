@@ -61,7 +61,7 @@ async def dog(ctx):
     url = "https://random.dog/"
     async with aiohttp.request("GET", url) as f:   
         img = await f.read()
-    await ctx.send(file=discord.File(img, "dog.jpg"))  
+    await ctx.send(file=discord.File(img))
     
 @bot.command()
 async def duck(ctx):
