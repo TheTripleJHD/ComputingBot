@@ -58,10 +58,9 @@ async def helpme(ctx):
 @bot.command()
 async def duck(ctx):
     url = "https://random-d.uk/api/v1/images/7.jpg"
-    async with bot.aio_session.get(url) as f:
-    img = await f.read()
-
-    await ctx.send(file=discord.File(img, "duck.png"))
+    async with bot.aio_session.get(url) as f:   
+        img = await f.read()
+        await ctx.send(file=discord.File(img, "duck.png"))
 
 @bot.command()
 async def ping(ctx):
