@@ -58,8 +58,8 @@ async def helpme(ctx):
     
 @bot.command()
 async def duck(ctx):
-    num = random.uniform(1,2)
-    if num = 1:
+    num = round(random.uniform(0.00,100.00), 2)
+    if num <= 50:
         url = "https://random-d.uk/api/v1/images/7.jpg"
         async with aiohttp.request("GET", url) as f:   
             img = await f.read()
