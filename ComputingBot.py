@@ -49,19 +49,8 @@ async def what(ctx):
 
 @bot.command()
 async def helpme(ctx):
-    await ctx.author.send("List of helpful commands:")
-    await ctx.author.send("!ping - What is your ping?")
-    await ctx.author.send("!cute - Who is the cutest?")
-    await ctx.author.send("!what - What is this discord all about?")
-    await ctx.author.send("!say - Want me to say something?")
-    await ctx.author.send("!gay - Check how gay you are!")
-    await ctx.author.send("!love - Do you want some love?")
-    await ctx.author.send("!rainbow - Rainboww!!")
-    await ctx.author.send("!zinnia - Find out who she has traumatised")
-    await ctx.author.send("!doggo - Awww how cute are dogs?")
-    await ctx.author.send("!ducc - Waddle waddle..")
-    await ctx.author.send("!dicc - Big Dicc Energy checker")
-    
+    (f'```{List of helpful commands:}```')
+    await ctx.author.send(f'```{List of helpful commands:\n!ping - What is your ping?\n!cute - Who is the cutest?\n!what - What is this discord all about?\n!say - Want me to say something?\n!gay - Check how gay you are!\n!rainbow - Rainboww!!\n!zinnia - Find out who she has traumatised\n!doggo - Awww how cute are dogs?\n!ducc - Waddle waddle..\n!dicc - Big Dicc Energy checker}```')  
 @bot.command()
 async def doggo(ctx):
     num = randint(1,4)
