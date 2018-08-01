@@ -158,7 +158,9 @@ async def dicc(ctx):
         text = ' Good job! Your big dicc energy exceeds past 80%'
         await ctx.send(ctx.author.mention + text)
     else:
-        text = ' Sorry, but your big dicc energy is weak asf.'
+        start = ' Sorry, but your big dicc energy is weak asf.'
+        end = " Currently at " + str(num) + "%."
+        text = start + end
         await ctx.send(ctx.author.mention + text)
     
     
