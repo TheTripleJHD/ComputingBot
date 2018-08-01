@@ -64,10 +64,11 @@ async def doggo(ctx):
     url1 = "http://loremflickr.com/1280/720/dog,puppy"
     url2 = "http://loremflickr.com/640/480/dog,puppy"
     url3 = "http://loremflickr.com/320/240/dog,puppy"
-    url = url+num
+    url = url+str(num)
     async with aiohttp.request("GET", url) as f:   
         img = await f.read()
     await ctx.send(file=discord.File(img, "nofilter.jpg"))
+    await ctx.send(url)
     
 @bot.command()
 async def ducc(ctx):
@@ -108,10 +109,10 @@ async def on_member_join(member):
 async def gay(ctx):
     name = str(ctx.author)
     num = round(random.uniform(0.00,100.00), 2)
-    if name =='zinnia#8516':
+    if name =='zinnia#8516' or name == 'Triple__J#8312':
         start = "But if you were a guy you would be "
         end = "% gay."
-        text start + str(num) + end
+        text = start + str(num) + end
         await ctx.send("Sorry but you're a girl. :3")
         await ctx.send(ctx.author.mention + text)
     elif name =='!ɥʇɹɐpᴉs#4852':
