@@ -3,7 +3,6 @@ from discord.ext import commands
 from discord.ext.commands import Bot
 import os
 import random
-from random import *
 import re
 import aiohttp
 
@@ -63,6 +62,7 @@ async def helpme(ctx):
     
 @bot.command()
 async def doggo(ctx):
+    from random import *
     num = randint(1,4)
     if num == 1:
         url = "http://loremflickr.com/1280/720/dog,puppy"   
@@ -74,7 +74,6 @@ async def doggo(ctx):
     async with aiohttp.request("GET", url) as f:   
         img = await f.read()
     await ctx.send(file=discord.File(img, "nofilter.jpg"))
-    await ctx.send(url)
     
 @bot.command()
 async def ducc(ctx):
@@ -143,6 +142,27 @@ async def gay(ctx):
         gay = "% gay."
         text = start + end + str(num) + gay 
         await ctx.send(ctx.author.mention + text)
+        
+@bot.command()
+async def dicc(ctx):
+    from random import *
+    name = str(ctx.author)
+    num = randint(0,100)
+    
+    if name =='zinnia#8516':
+        start = 'Oh wait you do, big dicc energy is currently at "
+        end = "%."
+        text = start + str(num) + end
+        await ctx.send("Do you even have one?")
+        await ctx.send(ctx.author.mention + text)
+    elif num >= 80:
+        text = 'Good job! Your big dicc energy exceeds past 80%'
+        await ctx.send(ctx.author.mention + text)
+    else:
+        text = 'Sorry, but your big dicc energy is weak asf.'
+        await ctx.send(ctx.author.mention + text)
+    
+    
            
 @bot.command()
 async def rainbow(ctx):
