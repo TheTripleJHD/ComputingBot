@@ -7,6 +7,7 @@ import re
 
 
 bot = commands.Bot(command_prefix="!", case_insensitive="true",)
+bot.remove_command('help')
 
 
 @bot.event
@@ -81,6 +82,7 @@ async def gay(ctx):
     num = round(random.uniform(0.00,100.00), 2)
     if name =='zinnia#8516':
         await ctx.send("Sorry but you're a girl. :3")
+        await ctx.send("But if you were a guy you would be " + num + "% gay.")
     elif name =='ɥʇɹɐpᴉs#4852':
          await ctx.send("Sid is that even a question? :)")  
     elif num >= 95.00:
@@ -103,15 +105,7 @@ async def gay(ctx):
         gay = "% gay."
         text = start + end + str(num) + gay 
         await ctx.send(ctx.author.mention + text)
-        
-@commands.command
-async def ok(ctx):
-    history = await ctx.channel.history(limit=2).flatten()
-    if len(history) != 2:
-        return
-    message = history[-1]
-    await message.add_reaction('\N{OK HAND SIGN}')
-    
+           
 @bot.command()
 async def rainbow(ctx):
     await ctx.message.add_reaction(emoji = "💙")
