@@ -19,7 +19,7 @@ async def on_ready():
    
 @bot.listen()
 async def on_message(message):
-    if user != ctx.bot.user:
+    if message.author != bot.user
        text = message.content.upper()
        text.split()
        if re.search(r'\b(da)?vid\b', text, re.I):
@@ -27,7 +27,7 @@ async def on_message(message):
         
 @bot.listen()
 async def on_message(message):
-     if user != ctx.bot.user:
+     if message.author != bot.user
         text = message.content.upper()
         text.split()
         if re.search(r'\b(zinnia)\b', text, re.I):
