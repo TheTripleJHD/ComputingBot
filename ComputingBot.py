@@ -64,11 +64,11 @@ async def helpme(ctx):
 async def doggo(ctx):
     num = randint(1,4)
     if num == 1:
-        url = "http://loremflickr.com/1280/720/dog,puppy"   
+        url = "http://loremflickr.com/1280/720/dog"   
     elif num == 2:
-        url = "http://loremflickr.com/640/480/dog,puppy"
+        url = "http://loremflickr.com/640/480/dog"
     else:
-        url = "http://loremflickr.com/320/240/dog,puppy"
+        url = "http://loremflickr.com/320/240/dog"
         
     async with aiohttp.request("GET", url) as f:   
         img = await f.read()
@@ -114,7 +114,7 @@ async def gay(ctx):
     name = str(ctx.author)
     num = round(random.uniform(0.00,100.00), 2)
     if name =='zinnia#8516' or name == 'Triple__J#8312':
-        start = "But if you were a guy you would be "
+        start = " But if you were a guy you would be "
         end = "% gay."
         text = start + str(num) + end
         await ctx.send("Sorry but you're a girl. :3")
