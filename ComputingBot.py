@@ -55,16 +55,18 @@ async def helpme(ctx):
     await ctx.send("!love - Do you want some love?")
     await ctx.send("!rainbow - Rainboww!!")
     await ctx.send("!zinnia - Find out who she has traumatised")
+    await ctx.send("!doggo - Awww how cute are dogs?")
+    await ctx.send("!ducc - Waddle waddle..")
     
 @bot.command()
-async def dog(ctx):
+async def doggo(ctx):
     url = "http://loremflickr.com/320/240/dog,puppy"
     async with aiohttp.request("GET", url) as f:   
         img = await f.read()
     await ctx.send(file=discord.File(img, "nofilter.jpg"))
     
 @bot.command()
-async def duck(ctx):
+async def ducc(ctx):
     num = random.uniform(0,100)
     if num <= 50:
         url = "https://random-d.uk/api/v1/randomimg"
