@@ -63,7 +63,7 @@ async def helpme(ctx):
     
 @bot.command()
 async def doggo(ctx):
-    num = randomint(1,4)
+    num = randint(1,4)
     if num == 1:
         url = "http://loremflickr.com/1280/720/dog,puppy"   
     elif num == 2:
