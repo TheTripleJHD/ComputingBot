@@ -149,16 +149,16 @@ async def dicc(ctx):
     num = randint(0,100)
     
     if name =='zinnia#8516':
-        start = 'Oh wait you do, big dicc energy is currently at '
+        start = ' Oh wait you do, big dicc energy is currently at '
         end = "%."
         text = start + str(num) + end
         await ctx.send("Do you even have one?")
         await ctx.send(ctx.author.mention + text)
     elif num >= 80:
-        text = 'Good job! Your big dicc energy exceeds past 80%'
+        text = ' Good job! Your big dicc energy exceeds past 80%'
         await ctx.send(ctx.author.mention + text)
     else:
-        text = 'Sorry, but your big dicc energy is weak asf.'
+        text = ' Sorry, but your big dicc energy is weak asf.'
         await ctx.send(ctx.author.mention + text)
     
     
