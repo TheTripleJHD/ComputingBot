@@ -15,7 +15,7 @@ bot.remove_command('help')
 async def on_ready():
     print("Bot is ready!")
     await bot.change_presence(
-    activity=discord.Activity(name='What is love - Twice',type=discord.ActivityType.listening),status=discord.Status.online)
+    activity=discord.Activity(name='DDU-DU DDU-DU - BLACKPINK',type=discord.ActivityType.listening),status=discord.Status.online)
    
 @bot.listen()
 async def on_message(message):
@@ -55,6 +55,13 @@ async def helpme(ctx):
     await ctx.send("!love - Do you want some love?")
     await ctx.send("!rainbow - Rainboww!!")
     await ctx.send("!zinnia - Find out who she has traumatised")
+    
+@bot.command()
+async def dog(ctx):
+    url = "https://random.dog/"
+    async with aiohttp.request("GET", url) as f:   
+        img = await f.read()
+    await ctx.send(file=discord.File(img, "dog.png"))  
     
 @bot.command()
 async def duck(ctx):
