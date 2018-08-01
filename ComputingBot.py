@@ -62,7 +62,6 @@ async def helpme(ctx):
     
 @bot.command()
 async def doggo(ctx):
-    from random import *
     num = randint(1,4)
     if num == 1:
         url = "http://loremflickr.com/1280/720/dog,puppy"   
@@ -145,7 +144,6 @@ async def gay(ctx):
         
 @bot.command()
 async def dicc(ctx):
-    from random import *
     name = str(ctx.author)
     num = randint(0,100)
     
