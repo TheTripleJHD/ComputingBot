@@ -58,10 +58,10 @@ async def helpme(ctx):
     
 @bot.command()
 async def dog(ctx):
-    url = "https://random.dog/"
+    url = "http://loremflickr.com/320/240/dog,puppy"
     async with aiohttp.request("GET", url) as f:   
         img = await f.read()
-    await ctx.send(file=discord.File(img))
+    await ctx.send(file=discord.File(img, "nofilter.jpg"))
     
 @bot.command()
 async def duck(ctx):
