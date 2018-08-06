@@ -43,6 +43,14 @@ async def on_message(message):
         await message.add_reaction('\N{OK HAND SIGN}')
         await bot.say("Call me BIG")
         
+@bot.listen()
+async def on_message(message):
+    if message.author != bot.user:
+       text = message.content.upper()
+       text.split()
+       if re.search(r'\b(pur)?lem\b', text, re.I):
+           await message.add_reaction('\N{SMILING FACE WITH HEART-SHAPED EYES}') 
+        
 @bot.command()
 async def what(ctx):
     await ctx.send(":computer:")
@@ -103,7 +111,7 @@ async def on_member_join(member):
 async def gay(ctx):
     name = str(ctx.author)
     num = round(uniform(0,100), 2)
-    if name =='zinnia#8516' or name == 'Triple__J#8312':
+    if name =='zinnia#8516':
         start = " But if you were a guy you would be "
         end = "% gay."
         text = start + str(num) + end
