@@ -16,7 +16,7 @@ bot.remove_command('help')
 async def on_ready():
     print("Bot is ready!")
     await bot.change_presence(
-    activity=discord.Activity(name='DDU-DU DDU-DU - BLACKPINK',type=discord.ActivityType.listening),status=discord.Status.online)
+    activity=discord.Activity(name='Summoners-War',type=discord.ActivityType.playing),status=discord.Status.online)
    
 @bot.listen()
 async def on_message(message):
