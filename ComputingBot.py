@@ -111,7 +111,9 @@ async def on_member_join(member):
 async def gay(ctx):
     name = str(ctx.author)
     num = round(uniform(0,100), 2)
-    if name =='zinnia#8516':
+    if name =='iced1#4281':
+        text = "Darren you're soooo gay there is no number.'
+    elif name =='zinnia#8516':
         start = " But if you were a guy you would be "
         end = "% gay."
         text = start + str(num) + end
