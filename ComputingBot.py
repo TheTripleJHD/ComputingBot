@@ -241,7 +241,7 @@ async def summon(ctx):
         
         if type == 1:
             fire = choices(population=['Fairy', 'Harpy', 'Inugami', 'Salamander', 'Serpent', 'Golem', 'Griffon', 'Inferno', 
-                                      'High Elemental', 'Bearman, Werewolf', 'Viking', 'Amazon', 'Martial Cat', 'Epikion Priest', 
+                                      'High Elemental', 'Bearman', 'Werewolf', 'Viking', 'Amazon', 'Martial Cat', 'Epikion Priest', 
                                       'Vagabond', 'Magical Archer', 'Bounty Hunter', 'Imp Champion', 'Mystic Witch', 'Grim Reaper', 'Living Armor', 
                                       'Drunken Master', 'Minotauros', 'Lizardman', 'Taoist', 'Beast Hunter', 'Penguin Knight', 'Battle Mammoth',
                                       'Cow Girl', 'Charger Shark', 'Martial Artist', 'Mummy', 'Frankenstein', 'Elven Ranger', 'Harg', 'Giant Warrior'], k=1)  
@@ -249,7 +249,7 @@ async def summon(ctx):
             await ctx.send(ctx.author.mention + " You have summoned a fire " + fire[0] + "! :star::star::star:")
         elif type == 2:
             water = choices(population=['Fairy', 'Harpy', 'Inugami', 'Salamander', 'Serpent', 'Golem', 'Griffon', 'Inferno', 
-                                      'High Elemental', 'Bearman, Werewolf', 'Viking', 'Amazon', 'Martial Cat', 'Epikion Priest', 
+                                      'High Elemental', 'Bearman', 'Werewolf', 'Viking', 'Amazon', 'Martial Cat', 'Epikion Priest', 
                                       'Vagabond', 'Magical Archer', 'Bounty Hunter', 'Imp Champion', 'Mystic Witch', 'Grim Reaper', 'Living Armor', 
                                       'Drunken Master', 'Minotauros', 'Lizardman', 'Beast Hunter', 'Penguin Knight', 'Battle Mammoth',
                                       'Cow Girl', 'Charger Shark', 'Martial Artist', 'Mummy', 'Frankenstein', 'Elven Ranger', 'Harg', 'Giant Warrior'], k=1)
@@ -257,7 +257,7 @@ async def summon(ctx):
             await ctx.send(ctx.author.mention + " You have summoned a water " + water[0] + "! :star::star::star:") 
         else:
             wind = choices(population=['Fairy', 'Harpy', 'Inugami', 'Salamander', 'Serpent', 'Golem', 'Griffon', 'Inferno', 
-                                      'High Elemental', 'Bearman, Werewolf', 'Viking', 'Amazon', 'Martial Cat', 'Epikion Priest', 
+                                      'High Elemental', 'Bearman', 'Werewolf', 'Viking', 'Amazon', 'Martial Cat', 'Epikion Priest', 
                                       'Vagabond', 'Magical Archer', 'Bounty Hunter', 'Imp Champion', 'Mystic Witch', 'Grim Reaper', 'Living Armor', 
                                       'Drunken Master', 'Minotauros', 'Lizardman', 'Beast Hunter', 'Penguin Knight', 'Battle Mammoth',
                                       'Cow Girl', 'Charger Shark', 'Martial Artist', 'Mummy', 'Frankenstein', 'Elven Ranger'], k=1)
