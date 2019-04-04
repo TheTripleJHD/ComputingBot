@@ -4,6 +4,7 @@ from discord.ext.commands import Bot
 import os
 import random
 from random import *
+from random import choice
 import re
 import aiohttp
 
