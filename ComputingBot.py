@@ -181,9 +181,9 @@ async def summon(ctx):
     if x <= 0.5:
         await ctx.send(ctx.author.mention + " You have summoned a 5 star monster!")
     elif x > 0.5 and x <= 8:
-        await ctx.send(ctx.author.mention + " You have summoned a 4 star monster!)
+        await ctx.send(ctx.author.mention + " You have summoned a 4 star monster!")
     else:
-        await ctx.send(ctx.author.mention + " You have summoned a 3 star monster!)
+        await ctx.send(ctx.author.mention + " You have summoned a 3 star monster!")
         
 
     
