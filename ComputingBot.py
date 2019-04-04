@@ -176,12 +176,36 @@ async def rainbow(ctx):
     
 @bot.command()
 async def summon(ctx):
-    await ctx.send("Summoning...")
+    ctx.send("Summoning...")
     star = choices(population=[5, 4, 3], weights=[0.005, 0.08, 0.915], k=1)
-    fire = choices(population=['Valkyrja', 'Dragon', 'Pheonix', 'Chimera', 'Oracle', 'Occult Girl', 'Dragon Knight',
+    
+    if star[0] == 5:
+        type = randint(1,5)
+        
+        if type == 1:
+            fire = choices(population=['Valkyrja', 'Dragon', 'Pheonix', 'Chimera', 'Oracle', 'Occult Girl', 'Dragon Knight',
+                                       'Monkey King', 'Archangel', 'Beast Monk' , 'Hell Lady', 'Pioneer', 'Polar Queen',
+                                       'Ifruit', 'Sea Emperor', 'Dessert Queen', 'Fair King', 'Unicorn',
+                                       'Paladin', 'Druid'], k=1]
+                           
+            await ctx.send(ctx.author.mention + " You have summoned a fire " + fire[0] + "! :star::star::star::star::star:")
+        elif type == 2:
+            water = choices(population=['Valkyrja', 'Dragon', 'Chimera', 'Oracle', 'Occult Girl', 'Dragon Knight',
                                        'Monkey King', 'Archangel', 'Beast Monk' , 'Hell Lady', 'Pioneer', 'Polar Queen',
                                        'Ifruit', 'Sea Emperor', 'Dessert Queen', 'Fair King', 'Panda Warrior', 'Unicorn',
                                        'Paladin', 'Druid', 'Lightning Emperor'], k=1)
-    await ctx.send(ctx.author.mention + " You have summoned a fire " + fire[0] + "! :star::star::star::star::star:")
+                           
+            await ctx.send(ctx.author.mention + " You have summoned a fire " + fire[0] + "! :star::star::star::star::star:") 
+        elif type == 3:
+            wind = choices(population=['Dragon', 'Pheonix', 'Chimera', 'Oracle', 'Occult Girl', 'Dragon Knight',
+                                       'Monkey King', 'Archangel', 'Beast Monk' , 'Hell Lady', 'Pioneer', 'Polar Queen',
+                                       'Ifruit', 'Sea Emperor', 'Dessert Queen', 'Fair King', 'Panda Warrior', 'Unicorn',
+                                       'Paladin', 'Druid', 'Lightning Emperor'], k=1)
+                           
+            await ctx.send(ctx.author.mention + " You have summoned a fire " + fire[0] + "! :star::star::star::star::star:") 
+        elif type == 4:
+            #light = 
+        elif type == 5:
+            #dark =
                    
 bot.run(os.getenv('TOKEN'))
