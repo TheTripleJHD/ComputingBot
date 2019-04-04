@@ -176,7 +176,7 @@ async def rainbow(ctx):
     
 @bot.command()
 async def summon(ctx):
-    await ctx.send(":MysticalScroll: Summoning... :MysticalScroll:")
+    await ctx.send(":MysticalScroll:Summoning...:MysticalScroll:")
     star = choices(population=[5, 4, 3], weights=[0.005, 0.08, 0.915], k=1)
     fire = choices(population=['Valkyrja', 'Dragon', 'Pheonix', 'Chimera', 'Oracle', 'Occult Girl', 'Dragon Knight',
                                        'Monkey King', 'Archangel', 'Beast Monk' , 'Hell Lady', 'Pioneer', 'Polar Queen',
