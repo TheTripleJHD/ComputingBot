@@ -266,7 +266,7 @@ async def summon(ctx):
             
 @bot.command()
 async def git(ctx):
-    await ctx.send(ctx.author.mention + "https://github.com/TheTripleJHD/ComputingBot/edit/master/ComputingBot.py")
+    await ctx.send(ctx.author.mention + " " + "https://github.com/TheTripleJHD/ComputingBot/edit/master/ComputingBot.py")
     
         
                               
