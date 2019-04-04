@@ -263,6 +263,11 @@ async def summon(ctx):
                                       'Cow Girl', 'Charger Shark', 'Martial Artist', 'Mummy', 'Frankenstein', 'Elven Ranger'], k=1)
                            
             await ctx.send(ctx.author.mention + " You have summoned a wind " + wind[0] + "! :star::star::star:")
+            
+@bot.command()
+async def git(ctx):
+    await ctx.send(ctx.author.mention + "https://github.com/TheTripleJHD/ComputingBot/edit/master/ComputingBot.py")
+    
         
                               
 bot.run(os.getenv('TOKEN'))
