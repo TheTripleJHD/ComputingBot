@@ -195,14 +195,14 @@ async def summon(ctx):
                                        'Ifruit', 'Sea Emperor', 'Dessert Queen', 'Fair King', 'Panda Warrior', 'Unicorn',
                                        'Paladin', 'Druid', 'Lightning Emperor'], k=1)
                            
-            await ctx.send(ctx.author.mention + " You have summoned a fire " + fire[0] + "! :star::star::star::star::star:") 
+            await ctx.send(ctx.author.mention + " You have summoned a water " + water[0] + "! :star::star::star::star::star:") 
         elif type == 3:
             wind = choices(population=['Dragon', 'Pheonix', 'Chimera', 'Oracle', 'Occult Girl', 'Dragon Knight',
                                        'Monkey King', 'Archangel', 'Beast Monk' , 'Hell Lady', 'Pioneer', 'Polar Queen',
                                        'Ifruit', 'Sea Emperor', 'Dessert Queen', 'Fair King', 'Panda Warrior', 'Unicorn',
                                        'Paladin', 'Druid', 'Lightning Emperor'], k=1)
                            
-            await ctx.send(ctx.author.mention + " You have summoned a fire " + fire[0] + "! :star::star::star::star::star:") 
+            await ctx.send(ctx.author.mention + " You have summoned a wind " + wind[0] + "! :star::star::star::star::star:") 
         elif type == 4:
             #light = 
         elif type == 5:
