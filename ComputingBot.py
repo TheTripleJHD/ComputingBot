@@ -4,7 +4,6 @@ from discord.ext.commands import Bot
 import os
 import random
 from random import *
-from random import choice
 import re
 import aiohttp
 
@@ -177,11 +176,8 @@ async def rainbow(ctx):
     
 @bot.command()
 async def summon(ctx):  
-    import numpy as np
-    choices = [1, 2, 3]
-    weights = [0.005, 0.08, 0.915]
-    rnd = np.random.choice(choices, p=weights)
-    await ctx.send(ctx.author.mention + " " + rnd)
+    choices = random.choices(population=[1, 2, 3], weights=[0.005, 0.08, 0.915], k=1)
+    await ctx.send(f'{ctx.author.mention}  {choices[0]}')
 
     
     
