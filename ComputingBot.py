@@ -176,7 +176,7 @@ async def rainbow(ctx):
     
 @bot.command()
 async def summon(ctx):
-    ctx.send("Summoning...")
+    await ctx.send("Summoning...")
     star = choices(population=[5, 4, 3], weights=[0.005, 0.08, 0.915], k=1)
     
     if star[0] == 5:
