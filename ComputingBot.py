@@ -176,8 +176,8 @@ async def rainbow(ctx):
     
 @bot.command()
 async def summon(ctx):  
-    choices = random.choices(population=[1, 2, 3], weights=[0.005, 0.08, 0.915], k=1)
-    await ctx.send(f'{ctx.author.mention}  {choices[0]}')
+    my_list = ['A'] * 5 + ['B'] * 5 + ['C'] * 90
+    random.choice(my_list)
 
     
     
