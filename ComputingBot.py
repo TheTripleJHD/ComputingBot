@@ -182,6 +182,6 @@ async def summon(ctx):
                                        'Monkey King', 'Archangel', 'Beast Monk' , 'Hell Lady', 'Pioneer', 'Polar Queen',
                                        'Ifruit', 'Sea Emperor', 'Dessert Queen', 'Fair King', 'Panda Warrior', 'Unicorn',
                                        'Paladin', 'Druid', 'Lightning Emperor'], k=1)
-    await ctx.send(ctx.author.mention + " You have summoned a fire " + fire[0] + "! :star::star::star::star::star:)
+    await ctx.send(ctx.author.mention + " You have summoned a fire " + fire[0] + "! :star::star::star::star::star:")
                    
 bot.run(os.getenv('TOKEN'))
