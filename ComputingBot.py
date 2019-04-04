@@ -181,7 +181,7 @@ async def summon(ctx):
     fire = choices(population=['Valkyrja', 'Dragon', 'Pheonix', 'Chimera', 'Oracle', 'Occult Girl', 'Dragon Knight',
                                        'Monkey King', 'Archangel', 'Beast Monk' , 'Hell Lady', 'Pioneer', 'Polar Queen',
                                        'Ifruit', 'Sea Emperor', 'Dessert Queen', 'Fair King', 'Panda Warrior', 'Unicorn',
-                                       'Paladin', 'Druid', 'Lightning Emperor'], k=1]
+                                       'Paladin', 'Druid', 'Lightning Emperor'], k=1)
     await ctx.send(ctx.author.mention + " " + fire[0])
                    
 bot.run(os.getenv('TOKEN'))
