@@ -178,6 +178,7 @@ async def rainbow(ctx):
 async def summon(ctx):  
     num = choices(population=[1, 2, 3], weights=[0.005, 0.08, 0.915], k=1)
     await ctx.send(f'{ctx.author.mention}  {num[0]}')
+    
         
 
     
