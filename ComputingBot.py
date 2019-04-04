@@ -174,4 +174,9 @@ async def rainbow(ctx):
     await ctx.message.add_reaction(emoji = "💜")
     await ctx.message.add_reaction(emoji = "🖤")
     
+@bot.command()
+async def summon(ctx):
+    num = random.choices(population=[1, 2, 3], weights=[0.005, 0.08, 0.915], k=1)
+    await ctx.send(ctx.author.mention + " " + num)
+    
 bot.run(os.getenv('TOKEN'))
