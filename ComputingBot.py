@@ -176,9 +176,15 @@ async def rainbow(ctx):
     
 @bot.command()
 async def summon(ctx):  
-    my_list = ['A'] * 5 + ['B'] * 5 + ['C'] * 90
-    random.choice(my_list)
+    x = random.uniform(1, 100)
 
-    
+    if x <= 0.5:
+        await ctx.send(ctx.author.mention + " You have summoned a 5 star monster!")
+    elif x > 0.5 and x <= 8:
+        await ctx.send(ctx.author.mention + " You have summoned a 4 star monster!)
+    else:
+        await ctx.send(ctx.author.mention + " You have summoned a 3 star monster!)
+        
+
     
 bot.run(os.getenv('TOKEN'))
