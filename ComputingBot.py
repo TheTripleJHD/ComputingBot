@@ -178,7 +178,7 @@ async def rainbow(ctx):
 async def summon(ctx):
     
     random.choices(population=[1, 2, 3], weights=[0.005, 0.08, 0.915], k=1)
-    awit ctx.send(ctx.author.mention + choice)
+    await ctx.send(ctx.author.mention + choice)
     
     
 bot.run(os.getenv('TOKEN'))
