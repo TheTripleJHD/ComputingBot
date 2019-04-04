@@ -180,7 +180,7 @@ async def summon(ctx):
     star = choices(population=[5, 4, 3], weights=[0.005, 0.08, 0.915], k=1)
     
     if star[0] == 5:
-        type = randint(1,5)
+        type = randint(1,3)
         
         if type == 1:
             fire = choices(population=['Valkyrja', 'Dragon', 'Pheonix', 'Chimera', 'Oracle', 'Occult Girl', 'Dragon Knight',
@@ -192,20 +192,77 @@ async def summon(ctx):
         elif type == 2:
             water = choices(population=['Valkyrja', 'Dragon', 'Chimera', 'Oracle', 'Occult Girl', 'Dragon Knight',
                                        'Monkey King', 'Archangel', 'Beast Monk' , 'Hell Lady', 'Pioneer', 'Polar Queen',
-                                       'Ifruit', 'Sea Emperor', 'Dessert Queen', 'Fairy King', 'Panda Warrior', 'Unicorn',
+                                       'Sea Emperor', 'Dessert Queen', 'Fairy King', 'Panda Warrior', 'Unicorn',
                                        'Paladin', 'Druid', 'Lightning Emperor'], k=1)
                            
             await ctx.send(ctx.author.mention + " You have summoned a water " + water[0] + "! :star::star::star::star::star:") 
-        elif type == 3:
+        else:
             wind = choices(population=['Dragon', 'Pheonix', 'Chimera', 'Oracle', 'Occult Girl', 'Dragon Knight',
                                        'Monkey King', 'Archangel', 'Beast Monk' , 'Hell Lady', 'Pioneer', 'Polar Queen',
-                                       'Ifruit', 'Sea Emperor', 'Dessert Queen', 'Fairy King', 'Panda Warrior', 'Unicorn',
+                                       'Sea Emperor', 'Dessert Queen', 'Fairy King', 'Panda Warrior', 'Unicorn',
                                        'Paladin', 'Druid', 'Lightning Emperor'], k=1)
                            
-            await ctx.send(ctx.author.mention + " You have summoned a wind " + wind[0] + "! :star::star::star::star::star:") 
-        elif type == 4:
-            #light = 
-        elif type == 5:
-            #dark =
-                   
+            await ctx.send(ctx.author.mention + " You have summoned a wind " + wind[0] + "! :star::star::star::star::star:")
+    elif star[0] == 4:
+        type = randint(1,3)
+        
+        if type == 1:
+            fire = choices(population=['Anubis', 'Assassin', 'Barbaric King', 'Boomerang Warrior', 'Brownie Magician',
+                                      'Chakram Dancer', 'Death Knight', 'Dice Magician', 'Dryad',
+                                      'Harp Magician', 'Horus', 'Jack-O-Lantern', 'Joker', 'Kobold Bomber', 'Kung Fu Girl'
+                                      'Lich', 'Magic Knight', 'Mermaid', 'Neostone Agent', 'Neostone Fighter',
+                                      'Nine-Tailed Fox', 'Ninja', 'Phantom Theif', 'Pierret', 'Pirate Captain',
+                                      'Rakshasa', 'Samurai', 'Sky Dancer', 'Sniper MK.I', 'Succubus', 'Sylph',
+                                      'Sylphid', 'Undine', 'Vampire'], k=1)
+                           
+            await ctx.send(ctx.author.mention + " You have summoned a fire " + fire[0] + "! :star::star::star::star:")
+        elif type == 2:
+            water = choices(population=['Anubis', 'Assassin', 'Barbaric King', 'Boomerang Warrior', 'Brownie Magician',
+                                      'Chakram Dancer', 'Death Knight', 'Dice Magician', 'Dryad',
+                                      'Harp Magician', 'Horus', 'Jack-O-Lantern', 'Joker', 'Kobold Bomber', 'Kung Fu Girl'
+                                      'Lich', 'Magic Knight', 'Mermaid', 'Neostone Agent', 'Neostone Fighter',
+                                      'Nine-Tailed Fox', 'Ninja', 'Phantom Theif', 'Pierret', 'Pirate Captain',
+                                      'Rakshasa', 'Samurai', 'Sky Dancer', 'Sniper MK.I', 'Succubus', 'Sylph',
+                                      'Sylphid', 'Undine', 'Vampire', 'Taoist'], k=1)
+                           
+            await ctx.send(ctx.author.mention + " You have summoned a water " + water[0] + "! :star::star::star::star:") 
+        else:
+            wind = choices(population=['Anubis', 'Assassin', 'Barbaric King', 'Boomerang Warrior', 'Brownie Magician',
+                                      'Chakram Dancer', 'Death Knight', 'Dice Magician', 'Dryad', 'Giant Warrior',
+                                      'Harp Magician', 'Horus', 'Jack-O-Lantern', 'Joker', 'Kobold Bomber', 'Kung Fu Girl'
+                                      'Lich', 'Magic Knight', 'Mermaid', 'Neostone Agent', 'Neostone Fighter',
+                                      'Nine-Tailed Fox', 'Ninja', 'Phantom Theif', 'Pierret', 'Pirate Captain',
+                                      'Rakshasa', 'Samurai', 'Sky Dancer', 'Sniper MK.I', 'Succubus', 'Sylph',
+                                      'Sylphid', 'Undine', 'Vampire', 'Taoist', 'Harg'], k=1)
+                           
+            await ctx.send(ctx.author.mention + " You have summoned a wind " + wind[0] + "! :star::star::star::star:")
+    else:
+        type = randint(1,3)
+        
+        if type == 1:
+            fire = choices(population=['Fairy', 'Harpy', 'Inugami', 'Salamander', 'Serpent', 'Golem', 'Griffon', 'Inferno', 
+                                      'High Elemental', 'Bearman, Werewolf', 'Viking', 'Amazon', 'Martial Cat', 'Epikion Priest', 
+                                      'Vagabond', 'Magical Archer', 'Bounty Hunter', 'Imp Champion', 'Mystic Witch', 'Grim Reaper', 'Living Armor', 
+                                      'Drunken Master', 'Minotauros', 'Lizardman', 'Taoist', 'Beast Hunter', 'Penguin Knight', 'Battle Mammoth',
+                                      'Cow Girl', 'Charger Shark', 'Martial Artist', 'Mummy', 'Frankenstein', 'Elven Ranger', 'Harg', 'Giant Warrior'], k=1)  
+            
+            await ctx.send(ctx.author.mention + " You have summoned a fire " + fire[0] + "! :star::star::star:")
+        elif type == 2:
+            water = choices(population=['Fairy', 'Harpy', 'Inugami', 'Salamander', 'Serpent', 'Golem', 'Griffon', 'Inferno', 
+                                      'High Elemental', 'Bearman, Werewolf', 'Viking', 'Amazon', 'Martial Cat', 'Epikion Priest', 
+                                      'Vagabond', 'Magical Archer', 'Bounty Hunter', 'Imp Champion', 'Mystic Witch', 'Grim Reaper', 'Living Armor', 
+                                      'Drunken Master', 'Minotauros', 'Lizardman', 'Beast Hunter', 'Penguin Knight', 'Battle Mammoth',
+                                      'Cow Girl', 'Charger Shark', 'Martial Artist', 'Mummy', 'Frankenstein', 'Elven Ranger', 'Harg', 'Giant Warrior'], k=1)
+                           
+            await ctx.send(ctx.author.mention + " You have summoned a water " + water[0] + "! :star::star::star:") 
+        else:
+            wind = choices(population=['Fairy', 'Harpy', 'Inugami', 'Salamander', 'Serpent', 'Golem', 'Griffon', 'Inferno', 
+                                      'High Elemental', 'Bearman, Werewolf', 'Viking', 'Amazon', 'Martial Cat', 'Epikion Priest', 
+                                      'Vagabond', 'Magical Archer', 'Bounty Hunter', 'Imp Champion', 'Mystic Witch', 'Grim Reaper', 'Living Armor', 
+                                      'Drunken Master', 'Minotauros', 'Lizardman', 'Beast Hunter', 'Penguin Knight', 'Battle Mammoth',
+                                      'Cow Girl', 'Charger Shark', 'Martial Artist', 'Mummy', 'Frankenstein', 'Elven Ranger'], k=1)
+                           
+            await ctx.send(ctx.author.mention + " You have summoned a wind " + wind[0] + "! :star::star::star:")
+        
+                              
 bot.run(os.getenv('TOKEN'))
