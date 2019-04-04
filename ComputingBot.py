@@ -181,7 +181,7 @@ async def summon(ctx):
     name = str(ctx.author)
     
     if name == 'Triple__J#8312':
-        star[0] = 5:
+        star[0] = 5
     
     if star[0] == 5:
         type = randint(1,3)
