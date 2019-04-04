@@ -213,7 +213,7 @@ async def summon(ctx):
                                       'Lich', 'Magic Knight', 'Mermaid', 'Neostone Agent', 'Neostone Fighter',
                                       'Nine-Tailed Fox', 'Ninja', 'Phantom Theif', 'Pierret', 'Pirate Captain',
                                       'Rakshasa', 'Samurai', 'Sky Dancer', 'Sniper MK.I', 'Succubus', 'Sylph',
-                                      'Sylphid', 'Undine', 'Vampire'], k=1)
+                                      'Sylphid', 'Undine', 'Vampire', 'Epikion Priest'], k=1)
                            
             await ctx.send(ctx.author.mention + " You have summoned a fire " + fire[0] + "! :star::star::star::star:")
         elif type == 2:
@@ -241,7 +241,7 @@ async def summon(ctx):
         
         if type == 1:
             fire = choices(population=['Fairy', 'Harpy', 'Inugami', 'Salamander', 'Serpent', 'Golem', 'Griffon', 'Inferno', 
-                                      'High Elemental', 'Bearman', 'Werewolf', 'Viking', 'Amazon', 'Martial Cat', 'Epikion Priest', 
+                                      'High Elemental', 'Bearman', 'Werewolf', 'Viking', 'Amazon', 'Martial Cat', 
                                       'Vagabond', 'Magical Archer', 'Bounty Hunter', 'Imp Champion', 'Mystic Witch', 'Grim Reaper', 'Living Armor', 
                                       'Drunken Master', 'Minotauros', 'Lizardman', 'Taoist', 'Beast Hunter', 'Penguin Knight', 'Battle Mammoth',
                                       'Cow Girl', 'Charger Shark', 'Martial Artist', 'Mummy', 'Frankenstein', 'Elven Ranger', 'Harg', 'Giant Warrior'], k=1)  
