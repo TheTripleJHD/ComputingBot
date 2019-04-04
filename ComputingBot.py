@@ -176,7 +176,8 @@ async def rainbow(ctx):
     
 @bot.command()
 async def summon(ctx):  
-    x = uniform(1, 100)
+    x = uniform(0, 100)
+    await ctx.send(x)
 
     if x <= 0.5:
         await ctx.send(ctx.author.mention + " You have summoned a 5 star monster!")
