@@ -189,7 +189,7 @@ async def summon(ctx):
         if type == 1:
             fire = choices(population=['Valkyrja', 'Dragon', 'Pheonix', 'Chimera', 'Oracle', 'Occult Girl', 'Dragon Knight',
                                        'Monkey King', 'Archangel', 'Beast Monk' , 'Hell Lady', 'Pioneer', 'Polar Queen',
-                                       'Ifruit', 'Sea Emperor', 'Dessert Queen', 'Fairy King', 'Unicorn',
+                                       'Sea Emperor', 'Dessert Queen', 'Fairy King', 'Unicorn',
                                        'Paladin', 'Druid'], k=1)
                            
             await ctx.send(ctx.author.mention + " You have summoned a fire " + fire[0] + "! :star::star::star::star::star:")
