@@ -1,1 +1,1 @@
-pip install discord.py==1.3.3
+pipwin install discord.py==1.3.3
