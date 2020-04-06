@@ -180,7 +180,7 @@ async def summon(ctx):
     star = choices(population=[5, 4, 3], weights=[0.005, 0.08, 0.915], k=1)
     name = str(ctx.author)
     
-    if (name =='Triple__J#8312'):
+    if (name =='˞˞#8312'):
         star[0] = 5
     
     if star[0] == 5:
