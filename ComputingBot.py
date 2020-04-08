@@ -65,9 +65,9 @@ async def what(ctx):
 async def helpme(ctx):
     await ctx.author.send("```List of helpful commands:\n~ping - What is your ping?\n~summon - Summon a monster\n~cute - Who is the cutest?\n~what - What is this discord all about?\n~say - Want me to say something?\n~gay - Check how gay you are!\n~rainbow - Rainboww!!\n~zinnia - Find out who she has traumatised\n~doggo - Awww how cute are dogs?\n~ducc - Waddle waddle..\n~dicc - Big Dicc Energy checker```")
 
-@bot.command()
-async def doggo(ctx):
-    async with ctx.session.get('https://random.dog/woof') as resp:
+    @bot.command()
+    async def dog(self, ctx):
+        async with ctx.session.get('https://random.dog/woof') as resp:
             if resp.status != 200:
                 return await ctx.send('No dog found :(')
 
@@ -86,8 +86,7 @@ async def doggo(ctx):
                         fp = io.BytesIO(await other.read())
                         await ctx.send(file=discord.File(fp, filename=filename))
             else:
-                await ctx.send(embed=discord.Embed(title='          Random Dog :dog:').set_image(url=url))
-                
+                await ctx.send(embed=discord.Embed(title='Random Dog').set_image(url=url))
 @bot.command()
 async def cat(ctx):
     async with ctx.session.get('https://api.thecatapi.com/v1/images/search') as resp:
