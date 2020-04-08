@@ -78,7 +78,7 @@ async def doggo(ctx):
     with io.BytesIO() as bp:
         image.save(bp)
         bp.seek(0)
-    await ctx.send(file=discord.File(bp, "dog.jpg"))
+    await ctx.send(file=discord.File(bp, "file.jpg"))
     
 @bot.command()
 async def ducc(ctx):
