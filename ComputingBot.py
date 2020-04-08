@@ -6,6 +6,10 @@ import random
 from random import *
 import re
 import aiohttp
+from PIL import Image
+import requests
+from io import BytesIO
+
 
 
 bot = commands.Bot(command_prefix="~", case_insensitive="true",)
@@ -67,15 +71,14 @@ async def helpme(ctx):
     await ctx.author.send("```List of helpful commands:\n~ping - What is your ping?\n~summon - Summon a monster\n~cute - Who is the cutest?\n~what - What is this discord all about?\n~say - Want me to say something?\n~gay - Check how gay you are!\n~rainbow - Rainboww!!\n~zinnia - Find out who she has traumatised\n~doggo - Awww how cute are dogs?\n~ducc - Waddle waddle..\n~dicc - Big Dicc Energy checker```")
 @bot.command()
 async def doggo(ctx):
-    url = "https://random.dog/"     
-    async with aiohttp.request("GET", url) as f:   
-        img = await f.read()
+    url = "https://random.dog/"
+    response = requests.get(url)
+    img = Image.open(BytesIO(response.content))
+    
     await ctx.send(file=discord.File(img, "nofilter.jpg"))
     
 @bot.command()
 async def ducc(ctx):
-    num = randint(0,100)
-    if num <= 50:
         url = "https://random-d.uk/"
         async with aiohttp.request("GET", url) as f:   
             img = await f.read()
