@@ -9,6 +9,7 @@ import aiohttp
 from PIL import Image
 import requests
 import io
+import urllib.request
 
 bot = commands.Bot(command_prefix="~", case_insensitive="true",)
 bot.remove_command('help')
