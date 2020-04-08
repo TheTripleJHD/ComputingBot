@@ -8,6 +8,7 @@ import re
 import aiohttp
 from PIL import Image
 import requests
+import StringIO
 from StringIO import StringIO
 
 
