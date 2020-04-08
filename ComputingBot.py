@@ -90,7 +90,7 @@ async def ducc(ctx):
     async with aiohttp.ClientSession() as cs:
         async with cs.get('https://random-d.uk/api/random') as resp:
             js = await resp.json()
-            await ctx.send(embed=discord.Embed(title='          Random Duck :duck:').set_image(url=js[0]['url']))
+            await ctx.send(embed=discord.Embed(title='          Random Duck :duck:').set_image(url=js['url']))
 
 @bot.command()
 async def ping(ctx):
