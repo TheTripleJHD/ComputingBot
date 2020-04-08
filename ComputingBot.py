@@ -40,7 +40,7 @@ async def on_message(message):
         text = message.content.upper()
         text.split()
         if re.search(r'\b(ahbar)\b', text, re.I):
-            await message.add_reaction('\N{ANGRY FACE}')
+            await message.add_reaction('\N{CLOWN FACE}')
 
 @bot.listen()
 async def on_message(message):
@@ -67,7 +67,7 @@ async def helpme(ctx):
     await ctx.author.send("```List of helpful commands:\n~ping - What is your ping?\n~summon - Summon a monster\n~cute - Who is the cutest?\n~what - What is this discord all about?\n~say - Want me to say something?\n~gay - Check how gay you are!\n~rainbow - Rainboww!!\n~zinnia - Find out who she has traumatised\n~doggo - Awww how cute are dogs?\n~ducc - Waddle waddle..\n~dicc - Big Dicc Energy checker```")
 @bot.command()
 async def doggo(ctx):
-    url = "https://dog.ceo/api/breeds/image/random"     
+    url = "https://random.dog/"     
     async with aiohttp.request("GET", url) as f:   
         img = await f.read()
     await ctx.send(file=discord.File(img, "nofilter.jpg"))
