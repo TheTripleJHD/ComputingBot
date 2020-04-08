@@ -24,15 +24,23 @@ async def on_message(message):
        text = message.content.upper()
        text.split()
        if re.search(r'\b(da)?vid\b', text, re.I):
-           await message.add_reaction('\N{SMILING FACE WITH HEART-SHAPED EYES}') 
+           await message.add_reaction('\N{SMILING FACE WITH HEART-SHAPED EYES}')
         
 @bot.listen()
 async def on_message(message):
      if message.author != bot.user:
         text = message.content.upper()
         text.split()
-        if re.search(r'\b(zinnia)\b', text, re.I):
+        if re.search(r'\b(darren)\b', text, re.I):
             await message.add_reaction('\N{ANGRY FACE}')
+            
+@bot.listen()
+async def on_message(message):
+     if message.author != bot.user:
+        text = message.content.upper()
+        text.split()
+        if re.search(r'\b(nethmi)\b', text, re.I) or re.search(r'\b(neth)\b', text, re.I):
+            await message.add_reaction('\N{MONKEY FACE}')
         
 @bot.listen()
 async def on_message(message):
@@ -48,8 +56,8 @@ async def on_message(message):
     if message.author != bot.user:
        text = message.content.upper()
        text.split()
-       if re.search(r'\b(pur)?lem\b', text, re.I):
-           await message.add_reaction('\N{SMILING FACE WITH HEART-SHAPED EYES}') 
+       if re.search(r'\b(ahbar)\b', text, re.I):
+           await message.add_reaction('\N{POO}') 
         
 @bot.command()
 async def what(ctx):
@@ -60,14 +68,7 @@ async def helpme(ctx):
     await ctx.author.send("```List of helpful commands:\n~ping - What is your ping?\n~summon - Summon a monster\n~cute - Who is the cutest?\n~what - What is this discord all about?\n~say - Want me to say something?\n~gay - Check how gay you are!\n~rainbow - Rainboww!!\n~zinnia - Find out who she has traumatised\n~doggo - Awww how cute are dogs?\n~ducc - Waddle waddle..\n~dicc - Big Dicc Energy checker```")
 @bot.command()
 async def doggo(ctx):
-    num = randint(1,4)
-    if num == 1:
-        url = "http://loremflickr.com/1280/720/dog"   
-    elif num == 2:
-        url = "http://loremflickr.com/640/480/dog"
-    else:
-        url = "http://loremflickr.com/320/240/dog"
-        
+    url = "https://dog.ceo/api/breeds/image/random"     
     async with aiohttp.request("GET", url) as f:   
         img = await f.read()
     await ctx.send(file=discord.File(img, "nofilter.jpg"))
@@ -76,15 +77,10 @@ async def doggo(ctx):
 async def ducc(ctx):
     num = randint(0,100)
     if num <= 50:
-        url = "https://random-d.uk/api/v1/randomimg"
+        url = "https://random-d.uk/"
         async with aiohttp.request("GET", url) as f:   
             img = await f.read()
         await ctx.send(file=discord.File(img, "duck.png"))
-    else:
-        url = "https://random-d.uk/api/v1/randomgif"
-        async with aiohttp.request("GET", url) as f:
-            img = await f.read()
-        await ctx.send(file=discord.File(img, "duck.gif"))
 
 @bot.command()
 async def ping(ctx):
