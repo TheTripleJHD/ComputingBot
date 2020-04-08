@@ -5,6 +5,7 @@ import os
 import random
 from random import *
 import re
+import aiohttp
 
 bot = commands.Bot(command_prefix="~", case_insensitive="true",)
 bot.remove_command('help')
@@ -66,11 +67,18 @@ async def helpme(ctx):
 
 @bot.command()
 async def doggo(ctx):
-    await ctx.send("https://www.randomdoggiegenerator.com/randomdoggie.php",spoiler=True)
+    async with aiohttp.ClientSession() as cs:
+    async with cs.get('https://random.dog/woof.json') as r:
+        res = await r.json()  # returns dict
+        await ctx.send(res['slideshow']['author'])
     
 @bot.command()
 async def ducc(ctx):
-    await ctx.send("https://random-d.uk/api/randomimg",spoiler=True)
+    async def doggo(ctx):
+    async with aiohttp.ClientSession() as cs:
+    async with cs.get('https://random-d.uk/api?format=json') as r:
+        res = await r.json()  # returns dict
+        await ctx.send(res['slideshow']['author'])
 
 @bot.command()
 async def ping(ctx):
