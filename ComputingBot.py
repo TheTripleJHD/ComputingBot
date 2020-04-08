@@ -8,6 +8,8 @@ import re
 import aiohttp
 import urllib.request
 from PIL import Image
+from io import BytesIO
+
 
 
 
@@ -73,7 +75,10 @@ async def helpme(ctx):
 async def doggo(ctx):
     url = "https://random.dog/"
     image = Image.open(urllib.request.urlopen(url))
-    await ctx.send(file=discord.File(image, "dog.png"))
+    with io.BytesIO() as bp:
+        image.save(bp)
+        bp.seek(0)
+    await ctx.send(file=discord.File(bp, "file.png"))
     
 @bot.command()
 async def ducc(ctx):
