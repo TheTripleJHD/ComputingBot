@@ -72,10 +72,8 @@ async def helpme(ctx):
 async def doggo(ctx):
     url = "https://random.dog/"
     response = requests.get(url)
-    image = Image.open(response.raw)
-    with io.BytesIO() as bp:
-        image.save(bp)
-        bp.seek(0)
+    dataBytesIO = io.BytesIO(image)
+    image = Image.open(dataBytesIO)
     await ctx.send(file=discord.File(image, "file.jpg"))
     
 @bot.command()
