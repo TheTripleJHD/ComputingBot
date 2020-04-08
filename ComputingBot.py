@@ -5,6 +5,7 @@ import os
 import random
 from random import *
 import re
+import io
 import aiohttp
 
 bot = commands.Bot(command_prefix="~", case_insensitive="true",)
@@ -78,14 +79,14 @@ async def dog(ctx):
             await ctx.send(embed=discord.Embed(title='    Random Dog :dog:').set_image(url=url))
 
 @bot.command()
-async def cat(self, ctx):
+async def cat(ctx):
     async with aiohttp.ClientSession() as cs:
         async with cs.get('https://api.thecatapi.com/v1/images/search') as resp:
             js = await resp.json()
             await ctx.send(embed=discord.Embed(title='          Random Cat :cat:').set_image(url=js[0]['url']))
         
 @bot.command()
-async def ducc(self, ctx):
+async def ducc(ctx):
     async with aiohttp.ClientSession() as cs:
         async with cs.get('https://random-d.uk/api/random') as resp:
             js = await resp.json()
