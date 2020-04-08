@@ -5,10 +5,6 @@ import os
 import random
 from random import *
 import re
-import aiohttp
-import io
-import urllib.request
-from PIL import Image
 
 bot = commands.Bot(command_prefix="~", case_insensitive="true",)
 bot.remove_command('help')
@@ -70,11 +66,11 @@ async def helpme(ctx):
 
 @bot.command()
 async def doggo(ctx):
-    await ctx.send("https://www.randomdoggiegenerator.com/randomdoggie.php")
+    await ctx.send("https://www.randomdoggiegenerator.com/randomdoggie.php",spoiler=True)
     
 @bot.command()
 async def ducc(ctx):
-    await ctx.send("https://random-d.uk/api/randomimg")
+    await ctx.send("https://random-d.uk/api/randomimg",spoiler=True)
 
 @bot.command()
 async def ping(ctx):
