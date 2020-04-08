@@ -8,6 +8,7 @@ import re
 import aiohttp
 from PIL import Image
 import requests
+import io
 
 bot = commands.Bot(command_prefix="~", case_insensitive="true",)
 bot.remove_command('help')
@@ -72,6 +73,9 @@ async def doggo(ctx):
     url = "https://random.dog/"
     response = requests.get(url)
     image = Image.open(response.raw)
+    with io.BytesIO() as bp:
+        image.save(bp)
+        bp.seek(0)
     await ctx.send(file=discord.File(image, "file.jpg"))
     
 @bot.command()
