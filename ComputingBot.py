@@ -87,7 +87,7 @@ async def doggo(self, ctx):
                         await ctx.send(file=discord.File(fp, filename=filename))
             else:
                 await ctx.send(embed=discord.Embed(title='          Random Dog :dog:').set_image(url=url))
-            
+                
 @bot.command()
 async def cat(self, ctx):
     async with ctx.session.get('https://api.thecatapi.com/v1/images/search') as resp:
@@ -95,12 +95,12 @@ async def cat(self, ctx):
             return await ctx.send('No cat found :(')
         js = await resp.json()
         await ctx.send(embed=discord.Embed(title='          Random Cat :cat:').set_image(url=js[0]['url']))
-    
+        
 @bot.command()
-async def ducc(ctx):
+async def ducc(self, ctx):
     async with ctx.session.get('https://random-d.uk/api/random') as resp:
         if resp.status != 200:
-            return await ctx.send('No cat found :(')
+            return await ctx.send('No duck found :(')
         js = await resp.json()
         await ctx.send(embed=discord.Embed(title='          Random Duck :duck:').set_image(url=js[0]['url']))
 
