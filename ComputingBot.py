@@ -40,7 +40,7 @@ async def on_message(message):
         text = message.content.upper()
         text.split()
         if re.search(r'\b(ahbar)\b', text, re.I):
-            await message.add_reaction('\N{:poop:}')
+            await message.add_reaction('\N{MIDDLE FINGER}')
 
 @bot.listen()
 async def on_message(message):
