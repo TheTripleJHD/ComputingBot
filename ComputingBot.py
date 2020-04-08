@@ -6,8 +6,8 @@ import random
 from random import *
 import re
 import aiohttp
-import urllib 
-import cStringIO
+import urllib.request
+from PIL import Image
 
 
 
@@ -71,8 +71,7 @@ async def helpme(ctx):
 @bot.command()
 async def doggo(ctx):
     url = "https://random.dog/"
-    file = cStringIO.StringIO(urllib.urlopen(URL).read())
-    img = Image.open(file)
+    image = Image.open(urllib.request.urlopen(url)
     await ctx.send(file=discord.File(img, "nofilter.jpg"))
     
 @bot.command()
