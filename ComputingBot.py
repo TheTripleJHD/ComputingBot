@@ -7,7 +7,7 @@ from random import *
 import re
 import aiohttp
 import urllib.request
-import Image
+from PIL import Image
 from io import BytesIO
 
 
