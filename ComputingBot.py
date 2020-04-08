@@ -33,7 +33,15 @@ async def on_message(message):
         text.split()
         if re.search(r'\b(darren)\b', text, re.I):
             await message.add_reaction('\N{ANGRY FACE}')
-            
+
+@bot.listen()
+async def on_message(message):
+     if message.author != bot.user:
+        text = message.content.upper()
+        text.split()
+        if re.search(r'\b(ahbar)\b', text, re.I):
+            await message.add_reaction('\N{POOP}')
+
 @bot.listen()
 async def on_message(message):
      if message.author != bot.user:
