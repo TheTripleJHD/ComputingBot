@@ -50,14 +50,6 @@ async def on_message(message):
         await message.add_reaction('\N{WHITE RIGHT POINTING BACKHAND INDEX}')
         await message.add_reaction('\N{OK HAND SIGN}')
 
-@bot.listen()
-async def on_message(message):
-     if message.author != bot.user:
-        text = message.content.upper()
-        text.split()
-        if re.search(r'\b(ahbar)\b', text, re.I):
-            await message.add_reaction('\N{POO}')
-
 @bot.command()
 async def what(ctx):
     await ctx.send(":computer:")
