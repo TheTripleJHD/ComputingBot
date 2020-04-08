@@ -6,10 +6,10 @@ import random
 from random import *
 import re
 import aiohttp
-import PIL
+
 from PIL import Image
 import requests
-from StringIO import StringIO
+from io import BytesIO
 
 
 
@@ -74,7 +74,7 @@ async def helpme(ctx):
 async def doggo(ctx):
     url = "https://random.dog/"
     response = requests.get(url)
-    img = Image.open(StringIO(response.content))
+    img = Image.open(BytesIO(response.content))
     await ctx.send(file=discord.File(img, "nofilter.jpg"))
     
 @bot.command()
