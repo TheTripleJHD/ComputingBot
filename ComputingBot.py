@@ -70,15 +70,11 @@ async def helpme(ctx):
 
 @bot.command()
 async def doggo(ctx):
-    url = "https://www.randomdoggiegenerator.com/randomdoggie.php"
-    image = Image.open(urllib.request.urlopen(url))
-    await ctx.send(file=discord.File(image, "dog.php"))
+    await ctx.send("https://www.randomdoggiegenerator.com/randomdoggie.php")
     
 @bot.command()
 async def ducc(ctx):
-        url = "https://random-d.uk/api/randomimg"
-        image = Image.open(urllib.request.urlopen(url))
-        await ctx.send(file=discord.File(image, "duck.jpg"))
+    await ctx.send("https://random-d.uk/api/randomimg")
 
 @bot.command()
 async def ping(ctx):
