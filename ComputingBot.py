@@ -70,16 +70,13 @@ async def helpme(ctx):
 
 @bot.command()
 async def doggo(ctx):
-    url = "https://random-d.uk/api/randomimg"
+    url = "https://www.randomdoggiegenerator.com/randomdoggie.php"
     image = Image.open(urllib.request.urlopen(url))
-    with io.BytesIO() as bp:
-        image.save(bp)
-        bp.seek(0)
     await ctx.send(file=discord.File(bp, "file.jpg"))
     
 @bot.command()
 async def ducc(ctx):
-        url = "https://random-d.uk/"
+        url = "https://random-d.uk/api/randomimg"
         async with aiohttp.request("GET", url) as f:   
             img = await f.read()
         await ctx.send(file=discord.File(img, "duck.png"))
