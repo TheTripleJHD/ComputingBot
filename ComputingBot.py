@@ -41,6 +41,7 @@ async def on_message(message):
         text = text.split(" ")
         if 'ahbar' in text:
             await message.add_reaction('\N{CLOWN FACE}')
+            await send(text)
 
 @bot.listen()
 async def on_message(message):
