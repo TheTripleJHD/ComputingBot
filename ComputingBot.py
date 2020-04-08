@@ -93,6 +93,11 @@ async def ducc(ctx):
             await ctx.send(embed=discord.Embed(title='          Random Duck :duck:').set_image(url=js['url']))
 
 @bot.command()
+async def champ(ctx):
+    champs = choices(population=['Aatrox', 'Ahri'], k=1)
+    await ctx.send(embed=discord.Embed(title='          Random Cat :cat:').set_image(url="https://ddragon.leagueoflegends.com/cdn/img/champion/splash/" + champs[0] + "_0.jpg"))
+            
+@bot.command()
 async def ping(ctx):
     await ctx.send(ctx.author.mention + " Pong!")
 
