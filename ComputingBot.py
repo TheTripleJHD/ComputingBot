@@ -72,7 +72,7 @@ async def helpme(ctx):
 async def doggo(ctx):
     url = "https://random.dog/"
     image = Image.open(urllib.request.urlopen(url)
-    await ctx.send(file=discord.File(image, "dog.png"))
+    ctx.send(file=discord.File(image, "dog.png"))
     
 @bot.command()
 async def ducc(ctx):
