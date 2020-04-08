@@ -86,7 +86,7 @@ async def cat(ctx):
             await ctx.send(embed=discord.Embed(title='          Random Cat :cat:').set_image(url=js[0]['url']))
         
 @bot.command()
-async def ducc(ctx):
+async def duck(ctx):
     async with aiohttp.ClientSession() as cs:
         async with cs.get('https://random-d.uk/api/random') as resp:
             js = await resp.json()
