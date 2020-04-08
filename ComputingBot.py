@@ -74,11 +74,10 @@ async def doggo(ctx):
     
 @bot.command()
 async def ducc(ctx):
-    async def doggo(ctx):
-        async with aiohttp.ClientSession() as cs:
-            async with cs.get('https://random-d.uk/api?format=json') as r:
-                res = await r.json()  # returns dict
-                await ctx.send(res['slideshow']['author'])
+    async with aiohttp.ClientSession() as cs:
+        async with cs.get('https://random-d.uk/api?format=json') as r:
+            res = await r.json()  # returns dict
+            await ctx.send(res['slideshow']['author'])
 
 @bot.command()
 async def ping(ctx):
