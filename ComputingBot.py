@@ -36,13 +36,12 @@ async def on_message(message):
 
 @bot.listen()
 async def on_message(message):
-    if message.author != bot.user:
+     if message.author != bot.user:
         text = message.content.upper()
-        text = text.split(" ")
-        if 'ahbar' in text:
+        text.split()
+        if re.search(r'\b(ahbar)\b', text, re.I):
             await message.add_reaction('\N{CLOWN FACE}')
-            await send(text)
-
+            
 @bot.listen()
 async def on_message(message):
      if message.author != bot.user:
