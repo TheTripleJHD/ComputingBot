@@ -88,7 +88,7 @@ async def doggo(self, ctx):
             else:
                 await ctx.send(embed=discord.Embed(title='          Random Dog :dog:').set_image(url=url))
             
-@bot.commad()
+@bot.command()
 async def cat(self, ctx):
        """Gives you a random cat."""
        async with ctx.session.get('https://api.thecatapi.com/v1/images/search') as resp:
