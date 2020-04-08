@@ -57,8 +57,8 @@ async def on_message(message):
        text = message.content.upper()
        text.split()
        if re.search(r'\b(ahbar)\b', text, re.I):
-           await message.add_reaction('\N{POO}') 
-        
+           await message.add_reaction('\N{POO}')
+            
 @bot.command()
 async def what(ctx):
     await ctx.send(":computer:")
