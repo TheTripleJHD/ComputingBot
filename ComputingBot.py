@@ -105,8 +105,7 @@ async def champ(ctx):
                                  'Sylas', 'Syndra', 'TahmKench', 'Taliyah', 'Talon', 'Taric', 'Teemo', 'Thresh', 'Tristana', 'Trundle', 'Tryndamere', 'TwistedFate',
                                  'Twitch', 'Udyr', 'Urgot', 'Varus', 'Vayne', 'Veigar', 'Velkoz', 'Vi', 'Viktor', 'Vladimir', 'Volibear', 'Warwick', 'Wukong',
                                  'Xayah', 'Xerath', 'XinZhao', 'Yasuo', 'Yorick', 'Yummi',  'Zac', 'Zed', 'Ziggs', 'Zilean', 'Zoe', 'Zyra'], k=1)
-    num = randint(0,2)
-    await ctx.send(embed=discord.Embed(title='          Random Champ').set_image(url="https://ddragon.leagueoflegends.com/cdn/img/champion/splash/" + champs[0] + "_" + str(num) + ".jpg"))
+    await ctx.send(embed=discord.Embed(title='          Random Champ').set_image(url="https://ddragon.leagueoflegends.com/cdn/img/champion/splash/" + champs[0] + "_0.jpg"))
             
 @bot.command()
 async def ping(ctx):
