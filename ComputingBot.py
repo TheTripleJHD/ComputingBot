@@ -8,7 +8,7 @@ import re
 import aiohttp
 from PIL import Image
 import requests
-from io import BytesIO
+from StringIO import StringIO
 
 
 
@@ -76,7 +76,7 @@ async def helpme(ctx):
 async def doggo(ctx):
     url = "https://random.dog/"
     response = requests.get(url)
-    image = Image.open(BytesIO(response.content))
+    image = Image.open(StringIO(response.content))
     await ctx.send(file=discord.File(image, "file.jpg"))
     
 @bot.command()
