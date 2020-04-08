@@ -90,12 +90,11 @@ async def doggo(self, ctx):
             
 @bot.command()
 async def cat(self, ctx):
-       """Gives you a random cat."""
-       async with ctx.session.get('https://api.thecatapi.com/v1/images/search') as resp:
-           if resp.status != 200:
-               return await ctx.send('No cat found :(')
-           js = await resp.json()
-           await ctx.send(embed=discord.Embed(title='          Random Cat :cat:').set_image(url=js[0]['url']))
+    async with ctx.session.get('https://api.thecatapi.com/v1/images/search') as resp:
+        if resp.status != 200:
+            return await ctx.send('No cat found :(')
+        js = await resp.json()
+        await ctx.send(embed=discord.Embed(title='          Random Cat :cat:').set_image(url=js[0]['url']))
     
 @bot.command()
 async def ducc(ctx):
