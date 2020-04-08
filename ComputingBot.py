@@ -71,7 +71,7 @@ async def helpme(ctx):
 @bot.command()
 async def doggo(ctx):
     url = "https://random.dog/"
-    image = Image.open(urllib.request.urlopen(url)
+    async with image = Image.open(urllib.request.urlopen(url)
     ctx.send(file=discord.File(image, "dog.png"))
     
 @bot.command()
