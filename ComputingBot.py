@@ -6,10 +6,9 @@ import random
 from random import *
 import re
 import aiohttp
-from PIL import Image
-import requests
 import io
-import urllib2
+import urllib.request
+from PIL import Image
 
 bot = commands.Bot(command_prefix="~", case_insensitive="true",)
 bot.remove_command('help')
