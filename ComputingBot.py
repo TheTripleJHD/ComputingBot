@@ -99,10 +99,11 @@ async def cat(self, ctx):
     
 @bot.command()
 async def ducc(ctx):
-    async with aiohttp.ClientSession() as cs:
-        async with cs.get('https://random-d.uk/api?format=json') as r:
-            res = await r.json()  # returns dict
-            await ctx.send(res['slideshow']['author'])
+    async with ctx.session.get('https://random-d.uk/api/random') as resp:
+           if resp.status != 200:
+               return await ctx.send('No cat found :(')
+           js = await resp.json()
+            await ctx.send(embed=discord.Embed(title='          Random Duck :duck:').set_image(url=js[0]['url']))
 
 @bot.command()
 async def ping(ctx):
