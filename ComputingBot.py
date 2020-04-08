@@ -66,11 +66,36 @@ async def helpme(ctx):
     await ctx.author.send("```List of helpful commands:\n~ping - What is your ping?\n~summon - Summon a monster\n~cute - Who is the cutest?\n~what - What is this discord all about?\n~say - Want me to say something?\n~gay - Check how gay you are!\n~rainbow - Rainboww!!\n~zinnia - Find out who she has traumatised\n~doggo - Awww how cute are dogs?\n~ducc - Waddle waddle..\n~dicc - Big Dicc Energy checker```")
 
 @bot.command()
-async def doggo(ctx):
-    async with aiohttp.ClientSession() as cs:
-        async with cs.get('https://random.dog/woof.json') as r:
-            res = await r.json()  # returns dict
-            await ctx.send(res['slideshow']['author'])
+async def doggo(self, ctx):
+    async with ctx.session.get('https://random.dog/woof') as resp:
+            if resp.status != 200:
+                return await ctx.send('No dog found :(')
+
+            filename = await resp.text()
+            url = f'https://random.dog/{filename}'
+            filesize = ctx.guild.filesize_limit if ctx.guild else 8388608
+            if filename.endswith(('.mp4', '.webm')):
+                async with ctx.typing():
+                    async with ctx.session.get(url) as other:
+                        if other.status != 200:
+                            return await ctx.send('Could not download dog video :(')
+
+                        if int(other.headers['Content-Length']) >= filesize:
+                            return await ctx.send(f'Video was too big to upload... See it here: {url} instead.')
+
+                        fp = io.BytesIO(await other.read())
+                        await ctx.send(file=discord.File(fp, filename=filename))
+            else:
+                await ctx.send(embed=discord.Embed(title='          Random Dog :dog:').set_image(url=url))
+            
+@bot.commad()
+async def cat(self, ctx):
+       """Gives you a random cat."""
+       async with ctx.session.get('https://api.thecatapi.com/v1/images/search') as resp:
+           if resp.status != 200:
+               return await ctx.send('No cat found :(')
+           js = await resp.json()
+           await ctx.send(embed=discord.Embed(title='          Random Cat :cat:').set_image(url=js[0]['url']))
     
 @bot.command()
 async def ducc(ctx):
