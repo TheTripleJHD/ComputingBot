@@ -94,8 +94,10 @@ async def ducc(ctx):
 
 @bot.command()
 async def champ(ctx):
-    champs = choices(population=['Aatrox', 'Ahri', 'Akali', 'Alistar', 'Amumu', 'Anivia', 'Annie', 'Aphelios', 'Ashe', 'AurelionSol', 'Azir', 'Bard', 'Blitzcrank', 'Brand', 'Braum', 'Caitlyn', 'Camille', 'Cassiopeia', 'Chogath', 'DrMundo', 'Draven', 'Ekko', 'Elise', 'Evelynn', 'Ezreal', 'Fiddlesticks', 'Fiora', 'Fizz', 'Galio,
-                                'Gangplank', 'Garen', 'Gnar', 'Gragas', 'Graves', 'Hecarim', 'Heimerdinger', 'Illaoi', 'Irelia', 'Ivern', 'Janna', 'JarvanIV', 'Jax', 'Jayce', 'Jihn', 'Jinx', 'Kaisa', 'Kalista', 'Karthus', 'Kassadin',  'Katarina', 'Kayle', 'Kayn', 'Kennen', 'Khazix',
+    champs = choices(population=['Aatrox', 'Ahri', 'Akali', 'Alistar', 'Amumu', 'Anivia', 'Annie', 'Aphelios', 'Ashe', 'AurelionSol', 'Azir', 'Bard', 'Blitzcrank',
+                                'Brand', 'Braum', 'Caitlyn', 'Camille', 'Cassiopeia', 'Chogath', 'DrMundo', 'Draven', 'Ekko', 'Elise', 'Evelynn', 'Ezreal', 'Fiddlesticks',
+                                'Fiora', 'Fizz', 'Galio', 'Gangplank', 'Garen', 'Gnar', 'Gragas', 'Graves', 'Hecarim', 'Heimerdinger', 'Illaoi', 'Irelia', 'Ivern', 'Janna',
+                                'JarvanIV', 'Jax', 'Jayce', 'Jihn', 'Jinx', 'Kaisa', 'Kalista', 'Karthus', 'Kassadin',  'Katarina', 'Kayle', 'Kayn', 'Kennen', 'Khazix',
                                 'Kindred', 'Kled', 'Kogmaw', 'Leblanc', 'LeeSin', 'Leona', 'Lissandra', 'Lucian', 'Lulu', 'Lux', 'Malphite', 'Malzahar', 'Maokai,
                                 'MasterYi', 'MissFortune', 'Mordekaiser',  'Morgana', 'Nami', 'Nasus', 'Nautilus', 'Neeko', 'Nidalee',  'Nocturne', 'Nunu', 'Olaf', 'Orianna',
                                 'Ornn', 'Pantheon', 'Poppy', 'Pyke', 'Qiyana', 'Quinn', 'Rakan', 'Rammus', 'Reksai', 'Renekton', 'Rengar', 'Riven', 'Rumble,
