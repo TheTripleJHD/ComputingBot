@@ -66,7 +66,7 @@ async def helpme(ctx):
     await ctx.author.send("```List of helpful commands:\n~ping - What is your ping?\n~summon - Summon a monster\n~cute - Who is the cutest?\n~what - What is this discord all about?\n~say - Want me to say something?\n~gay - Check how gay you are!\n~rainbow - Rainboww!!\n~zinnia - Find out who she has traumatised\n~doggo - Awww how cute are dogs?\n~ducc - Waddle waddle..\n~dicc - Big Dicc Energy checker```")
 
 @bot.command()
-async def doggo(self, ctx):
+async def doggo(ctx):
     async with ctx.session.get('https://random.dog/woof') as resp:
             if resp.status != 200:
                 return await ctx.send('No dog found :(')
@@ -89,7 +89,7 @@ async def doggo(self, ctx):
                 await ctx.send(embed=discord.Embed(title='          Random Dog :dog:').set_image(url=url))
                 
 @bot.command()
-async def cat(self, ctx):
+async def cat(ctx):
     async with ctx.session.get('https://api.thecatapi.com/v1/images/search') as resp:
         if resp.status != 200:
             return await ctx.send('No cat found :(')
@@ -97,7 +97,7 @@ async def cat(self, ctx):
         await ctx.send(embed=discord.Embed(title='          Random Cat :cat:').set_image(url=js[0]['url']))
         
 @bot.command()
-async def ducc(self, ctx):
+async def ducc(ctx):
     async with ctx.session.get('https://random-d.uk/api/random') as resp:
         if resp.status != 200:
             return await ctx.send('No duck found :(')
