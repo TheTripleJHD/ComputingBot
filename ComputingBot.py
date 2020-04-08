@@ -72,9 +72,20 @@ async def helpme(ctx):
 async def doggo(ctx):
     url = "https://random.dog/"
     response = requests.get(url)
-    dataBytesIO = io.BytesIO(response)
-    image = Image.open(dataBytesIO)
+    byteImgIO = io.BytesIO()
+    image = Image.open(response.raw)
+    image.save(byteImgIO, "JPG")
+    byteImgIO.seek(0)
+    image = byteImgIO.read()
     await ctx.send(file=discord.File(image, "file.jpg"))
+    
+    
+byteImgIO = io.BytesIO()
+byteImg = Image.open("some/location/to/a/file/in/my/directories.png")
+byteImg.save(byteImgIO, "PNG")
+byteImgIO.seek(0)
+byteImg = byteImgIO.read()
+    
     
 @bot.command()
 async def ducc(ctx):
