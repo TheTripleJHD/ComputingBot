@@ -72,7 +72,7 @@ async def helpme(ctx):
 async def doggo(ctx):
     url = "https://random.dog/"
     response = requests.get(url)
-    dataBytesIO = io.BytesIO(image)
+    dataBytesIO = io.BytesIO(response)
     image = Image.open(dataBytesIO)
     await ctx.send(file=discord.File(image, "file.jpg"))
     
