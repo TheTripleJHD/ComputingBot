@@ -79,17 +79,17 @@ async def dog(ctx):
             await ctx.send(embed=discord.Embed(title='    Random Dog :dog:').set_image(url=url))
             
 @bot.command()
-async def breed(ctx, *, something):
+async def breed(ctx, something):
     if something=="":
         await ctx.send(":red_square: ~breed (name of breed). :red_square:")
-        async with aiohttp.ClientSession() as cs:
-            url = "https://dog.ceo/api/breed/" + something + "/images/random"
-            async with cs.get(url) as resp:
-                js = await resp.json() 
-                if len(js)==3:
-                    await ctx.send(":red_square: ERROR: Breed not found! try another make sure you use lowercase. :red_square:")
-                else:
-                    await ctx.send(embed=discord.Embed(title= "Random picture of a " + something + " :dog:").set_image(url=js['message']))
+    async with aiohttp.ClientSession() as cs:
+        url = "https://dog.ceo/api/breed/" + something + "/images/random"
+        async with cs.get(url) as resp:
+            js = await resp.json() 
+            if len(js)==3:
+                await ctx.send(":red_square: ERROR: Breed not found! try another make sure you use lowercase. :red_square:")
+             else:
+                await ctx.send(embed=discord.Embed(title= "Random picture of a " + something + " :dog:").set_image(url=js['message']))
             
 @bot.command()
 async def cat(ctx):
