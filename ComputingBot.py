@@ -77,7 +77,18 @@ async def dog(ctx):
             await ctx.send(file=discord.File(fp, filename=filename))
         else:
             await ctx.send(embed=discord.Embed(title='    Random Dog :dog:').set_image(url=url))
-
+            
+@bot.command()
+async def breed(ctx, *, something):
+    async with aiohttp.ClientSession() as cs:
+        url = "https://dog.ceo/api/breed/" + something + "/images/random"
+        async with cs.get(url) as resp:
+            js = await resp.json() 
+            if js[3]['code'] == '404':
+                ctx.send("Breed not found! try another make sure you use lowercase :)")
+            else:
+                await ctx.send(embed=discord.Embed(title= "Random " + something + "dog :dog:").set_image(url=js[0]['message']))
+            
 @bot.command()
 async def cat(ctx):
     async with aiohttp.ClientSession() as cs:
