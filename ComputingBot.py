@@ -88,7 +88,7 @@ async def breed(ctx, something):
             js = await resp.json() 
             if len(js)==3:
                 await ctx.send(":red_square: ERROR: Breed not found! try another make sure you use lowercase. :red_square:")
-             else:
+            else:
                 await ctx.send(embed=discord.Embed(title= "Random picture of a " + something + " :dog:").set_image(url=js['message']))
             
 @bot.command()
