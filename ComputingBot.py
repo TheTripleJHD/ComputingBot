@@ -83,7 +83,7 @@ async def breed(ctx, *, something):
     async with aiohttp.ClientSession() as cs:
         url = "https://dog.ceo/api/breed/" + something + "/images/random"
         if not something:
-            await ctx.send(":red_square: Please type in a dog breed. :red_square:")
+            ctx.send(":red_square: Please type in a dog breed. :red_square:")
         else:    
             async with cs.get(url) as resp:
                 js = await resp.json() 
