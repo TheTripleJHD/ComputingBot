@@ -87,10 +87,10 @@ async def breed(ctx, *, something):
         else:    
             async with cs.get(url) as resp:
                 js = await resp.json() 
-                if js[3]['code'] == "404":
+                if len(js)== 2:
                     await ctx.send("Breed not found! try another make sure you use lowercase :)")
                 else:
-                    await ctx.send(embed=discord.Embed(title= "Random " + something + "dog :dog:").set_image(url=js[0]["message"]))
+                    await ctx.send(embed=discord.Embed(title= "Random " + something + "dog :dog:").set_image(url=js['message']))
             
 @bot.command()
 async def cat(ctx):
