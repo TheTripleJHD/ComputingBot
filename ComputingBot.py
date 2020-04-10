@@ -80,7 +80,7 @@ async def dog(ctx):
             
 @bot.command()
 async def breed(ctx, *, something):
-    if not something:
+    if something == "":
         await ctx.send(":red_square: Please type in a dog breed. :red_square:")
     else:
         async with aiohttp.ClientSession() as cs:
