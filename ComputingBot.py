@@ -80,8 +80,6 @@ async def dog(ctx):
             
 @bot.command()
 async def breed(ctx, *, something):
-    if something== None:
-        await ctx.send(":red_square: ~breed (name of breed). :red_square:")
     async with aiohttp.ClientSession() as cs:
         url = "https://dog.ceo/api/breed/" + something + "/images/random"
         async with cs.get(url) as resp:
