@@ -79,8 +79,8 @@ async def dog(ctx):
             await ctx.send(embed=discord.Embed(title='    Random Dog :dog:').set_image(url=url))
             
 @bot.command()
-async def breed(ctx, something):
-    if something=="":
+async def breed(ctx, *, something):
+    if something== None:
         await ctx.send(":red_square: ~breed (name of breed). :red_square:")
     async with aiohttp.ClientSession() as cs:
         url = "https://dog.ceo/api/breed/" + something + "/images/random"
