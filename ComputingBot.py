@@ -41,22 +41,6 @@ async def on_message(message):
         text.split()
         if re.search(r'\b(ahbar)\b', text, re.I):
             await message.add_reaction('\N{CLOWN FACE}')
-            
-@bot.listen()
-async def on_message(message):
-     if message.author != bot.user:
-        text = message.content.upper()
-        text.split()
-        if re.search(r'\b(nethmi)\b', text, re.I) or re.search(r'\b(neth)\b', text, re.I):
-            await message.add_reaction('\N{MONKEY FACE}')
-        
-@bot.listen()
-async def on_message(message):
-     text = message.content.upper()
-     text.split()
-     if re.search(r'\b(weng)\b', text, re.I) or re.search(r'\b(yulei)\b', text, re.I):
-        await message.add_reaction('\N{WHITE RIGHT POINTING BACKHAND INDEX}')
-        await message.add_reaction('\N{OK HAND SIGN}')
 
 @bot.command()
 async def what(ctx):
@@ -123,14 +107,6 @@ async def ping(ctx):
     await ctx.send(ctx.author.mention + " Pong!")
 
 @bot.command()
-async def cute(ctx):
-    await ctx.send("David is cute")
-   
-@bot.command()
-async def zinnia(ctx):
-    await ctx.send("Poor Gideon... :sob:")
-
-@bot.command()
 async def say(ctx, *, something):
     await ctx.send(something)
 
@@ -143,26 +119,8 @@ async def on_member_join(member):
 async def gay(ctx):
     name = str(ctx.author)
     num = round(uniform(0,100), 2)
-    if name =='iced1#4281':
-        text = " Darren you're soooo gay there is no number."
-        await ctx.send(ctx.author.mention + text)
-    elif name =='zinnia#8516':
-        start = " But if you were a guy you would be "
-        end = "% gay."
-        text = start + str(num) + end
-        await ctx.send("Sorry but you're a girl. :3")
-        await ctx.send(ctx.author.mention + text)
-    elif name =='!ɥʇɹɐpᴉs#4852':
-         await ctx.send("Sid is that even a question? :)")  
-    elif num >= 95.00:
-        start = " You are just gay kys."
-        end = "% gay."
-        text = start + end
-        gay = " Estimated to be "
-        text = start + gay + str(num) + end
-        await ctx.send(ctx.author.mention + text)
-      
-    elif num >= 5.00 and num < 95.00:
+    
+    if num >= 5.00 and num < 95.00:
         end = "% Gay."
         start = " You are "
         text = start + str(num) + end
